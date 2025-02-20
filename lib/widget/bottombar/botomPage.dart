@@ -14,32 +14,25 @@ class _HomeState extends State<Home> {
   final screens = [
     HomePage(),
     HomePage(),
+    HomePage(),
+    HomePage(),
+    HomePage(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color(0xff91D7E3),
-          items: [
-            BottomNavigationBarItem(
-                icon: Container(
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                      color: Color(0xff4E8A96),
-                      borderRadius: BorderRadius.circular(40)),
-                  child: ImageIcon(
-                    AssetImage("assets/image 584 (1).png"),
-                  ),
-                ),
-                label: ""),
-            BottomNavigationBarItem(
-                icon: ImageIcon(
-                  AssetImage("assets/Group 2502.png"),
-                ),
-                label: ""),
-          ],
-        ),
+        bottomNavigationBar:
+            NavigationBar(backgroundColor: Color(0xff76C9DB), destinations: [
+          NavigationDestination(
+              icon: Icon(Icons.supervisor_account), label: "hi"),
+          NavigationDestination(
+              icon: Icon(Icons.supervisor_account), label: ""),
+          NavigationDestination(
+              icon: Icon(Icons.supervisor_account), label: ""),
+          NavigationDestination(
+              icon: Icon(Icons.supervisor_account), label: ""),
+          NavigationDestination(icon: Icon(Icons.supervisor_account), label: "")
+        ]),
         body: IndexedStack(
           index: currentindex,
           children: screens,

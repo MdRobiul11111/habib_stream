@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/widget/bottombar/botomPage.dart';
 import 'package:habib_stream/widget/loginpage/loginPage2.dart';
+import 'package:habib_stream/widget/loginpage/retypepassword.dart';
 
 class Forgetpage extends StatefulWidget {
   const Forgetpage({super.key});
@@ -91,11 +91,18 @@ class _ForgetpageState extends State<Forgetpage> {
                     color: Color(0xff4E8A96),
                     child: Row(
                       children: [
+                        // ignore: sized_box_for_whitespace
                         Container(
                           height: 50,
                           width: 293,
                           child: TextFormField(
+                            onChanged: (value) {
+                              if (value.length == 6) {
+                                FocusScope.of(context).nextFocus();
+                              }
+                            },
                             obscureText: true,
+                            keyboardType: TextInputType.number,
                             decoration: InputDecoration(
                                 border: const OutlineInputBorder(),
                                 hintText: 'Input 6 digit code',
@@ -135,7 +142,7 @@ class _ForgetpageState extends State<Forgetpage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Home(),
+                                    builder: (context) => Retypepassword(),
                                   ));
                             },
                             child: Text(
