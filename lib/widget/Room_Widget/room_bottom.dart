@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/Room_Widget/RoomPage.dart';
+import 'package:habib_stream/widget/Room_Widget/inboxpage.dart';
 
 class BottomNav extends StatefulWidget {
   BottomNav({Key? key}) : super(key: key);
@@ -15,10 +16,12 @@ class _BottomNavState extends State<BottomNav> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 4, vsync: this);
+    tabController = TabController(length: 6, vsync: this);
   }
 
   List<Widget> myChilders = const [
+    Roompage(),
+    Inboxpage(),
     Roompage(),
     Roompage(),
     Roompage(),
@@ -33,10 +36,8 @@ class _BottomNavState extends State<BottomNav> with TickerProviderStateMixin {
             controller: tabController,
             children: myChilders),
         bottomNavigationBar: SizedBox(
-          height: kBottomNavigationBarHeight,
           child: BottomAppBar(
             color: Color(0xff7CCEDC),
-            height: 70,
             child: TabBar(
                 onTap: (index) {
                   setState(() {
@@ -46,22 +47,28 @@ class _BottomNavState extends State<BottomNav> with TickerProviderStateMixin {
                 controller: tabController,
                 tabs: [
                   Tab(
-                    iconMargin: EdgeInsets.only(bottom: 0),
-                    icon: selectedIndex == 0
-                        ? const Icon(Icons.home)
-                        : const Icon(Icons.home_mini),
-                  ),
-                  Tab(
                     iconMargin: EdgeInsets.only(bottom: 4),
                     icon: Image(image: AssetImage("assets/Group 2316.png")),
                   ),
-                  const Tab(
+                  Tab(
                     iconMargin: EdgeInsets.only(bottom: 4),
-                    icon: Icon(Icons.info),
+                    icon: Image(image: AssetImage("assets/Group 2317.png")),
+                  ),
+                  Tab(
+                    iconMargin: EdgeInsets.only(bottom: 4),
+                    icon: Image(image: AssetImage("assets/Group 2318.png")),
+                  ),
+                  Tab(
+                    iconMargin: EdgeInsets.only(bottom: 4),
+                    icon: Image(image: AssetImage("assets/Group 2319.png")),
                   ),
                   const Tab(
                     iconMargin: EdgeInsets.only(bottom: 4),
-                    icon: Icon(Icons.settings),
+                    icon: Image(image: AssetImage("assets/Group 2320.png")),
+                  ),
+                  const Tab(
+                    iconMargin: EdgeInsets.only(bottom: 9),
+                    icon: Image(image: AssetImage("assets/image 603.png")),
                   )
                 ]),
           ),

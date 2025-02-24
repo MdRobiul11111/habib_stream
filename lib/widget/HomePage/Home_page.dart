@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/All_Country_Page/All_country_page.dart';
 import 'package:habib_stream/widget/HomePage/MainWidget/MainPage.dart';
 import 'package:habib_stream/widget/Room_Widget/room_bottom.dart';
+import 'package:habib_stream/widget/Room_Widget/roomspolash.dart';
 import 'package:habib_stream/widget/searchPage/searchPage.dart';
 
 class HomePage extends StatefulWidget {
@@ -71,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => BottomNav(),
+                          builder: (context) => Roomspolash(),
                         ));
                   },
                   child: Image(image: AssetImage("assets/Mask group.png"))),

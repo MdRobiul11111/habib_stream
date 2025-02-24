@@ -1,6 +1,5 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
-import 'package:habib_stream/widget/HomePage/Home_page.dart';
 import 'package:habib_stream/widget/HomePage/MainWidget/FollowPage.dart';
 import 'package:habib_stream/widget/HomePage/MainWidget/FriendsPage.dart';
 import 'package:habib_stream/widget/HomePage/MainWidget/RecentlyPage.dart';
@@ -64,11 +63,7 @@ class _MainpageState extends State<Mainpage> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => HomePage(),
-                      ));
+                  Navigator.pop(context);
                 },
                 child: Text(
                   "Popular",

@@ -1,18 +1,30 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:habib_stream/widget/Room_Widget/inboxpage.dart';
+import 'package:habib_stream/widget/Room_Widget/RoomPage.dart';
 
-import 'Room_details/Room_details.dart';
-
-class Roompage extends StatefulWidget {
-  const Roompage({super.key});
+class Roomspolash extends StatefulWidget {
+  const Roomspolash({super.key});
 
   @override
-  State<Roompage> createState() => _RoompageState();
+  State<Roomspolash> createState() => _RoompageState();
 }
 
-class _RoompageState extends State<Roompage> {
+class _RoompageState extends State<Roomspolash> {
+  late BuildContext _context;
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    Timer(Duration(seconds: 3), (() {
+      Navigator.pushReplacement(
+          _context, MaterialPageRoute(builder: (context) => Roompage()));
+    }));
+  }
+
   @override
   Widget build(BuildContext context) {
+    _context = context;
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -64,22 +76,12 @@ class _RoompageState extends State<Roompage> {
                                       ),
                                       Row(
                                         children: [
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        RoomDetails(),
-                                                  ));
-                                            },
-                                            child: Text(
-                                              "Habib Khan",
-                                              style: TextStyle(
-                                                  // fontSize: 20,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.white),
-                                            ),
+                                          Text(
+                                            "Habib Khan",
+                                            style: TextStyle(
+                                                // fontSize: 20,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white),
                                           ),
                                           SizedBox(
                                             width: 5,
@@ -804,7 +806,7 @@ class _RoompageState extends State<Roompage> {
                                   ),
                                   Text("0"),
                                 ],
-                              ),
+                              )
                             ],
                           ),
                         ],
@@ -820,13 +822,7 @@ class _RoompageState extends State<Roompage> {
                                   image: AssetImage("assets/Group 2316.png"))),
                           Spacer(),
                           InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => Inboxpage(),
-                                    ));
-                              },
+                              onTap: () {},
                               child: Image(
                                   image: AssetImage("assets/Group 2317.png"))),
                           Spacer(),
@@ -855,6 +851,24 @@ class _RoompageState extends State<Roompage> {
                   ),
                 )
               ],
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 150),
+              height: 375,
+              width: 375,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/Group 1321316552.png"))),
+              child: Container(
+                margin: EdgeInsets.only(top: 100, left: 150),
+                child: Text(
+                  "+2 Coins",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 12, right: 12),

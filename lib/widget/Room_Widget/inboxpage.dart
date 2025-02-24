@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/widget/Room_Widget/inboxpage.dart';
 
 import 'Room_details/Room_details.dart';
 
-class Roompage extends StatefulWidget {
-  const Roompage({super.key});
+class Inboxpage extends StatefulWidget {
+  const Inboxpage({super.key});
 
   @override
-  State<Roompage> createState() => _RoompageState();
+  State<Inboxpage> createState() => _RoompageState();
 }
 
-class _RoompageState extends State<Roompage> {
+class _RoompageState extends State<Inboxpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -814,41 +813,40 @@ class _RoompageState extends State<Roompage> {
                       ),
                       Row(
                         children: [
-                          InkWell(
-                              onTap: () {},
-                              child: Image(
-                                  image: AssetImage("assets/Group 2316.png"))),
+                          // ignore: sized_box_for_whitespace
+                          Container(
+                            height: 45,
+                            width: 283,
+                            color: Color(0xff63ADBB),
+                            child: TextFormField(
+                              obscureText: true,
+                              decoration: InputDecoration(
+                                  suffixIcon: InkWell(
+                                    onTap: () {},
+                                    child: Icon(
+                                      Icons.emoji_emotions,
+                                      color: Colors.amber,
+                                    ),
+                                  ),
+                                  border: const OutlineInputBorder(),
+                                  hintText: 'Say Hi,',
+                                  hintStyle: TextStyle(color: Colors.white)),
+                            ),
+                          ),
                           Spacer(),
-                          InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => Inboxpage(),
-                                    ));
-                              },
-                              child: Image(
-                                  image: AssetImage("assets/Group 2317.png"))),
-                          Spacer(),
-                          InkWell(
-                              onTap: () {},
-                              child: Image(
-                                  image: AssetImage("assets/Group 2318.png"))),
-                          Spacer(),
-                          InkWell(
-                              onTap: () {},
-                              child: Image(
-                                  image: AssetImage("assets/Group 2319.png"))),
-                          Spacer(),
-                          InkWell(
-                              onTap: () {},
-                              child: Image(
-                                  image: AssetImage("assets/Group 2320.png"))),
-                          Spacer(),
-                          InkWell(
-                              onTap: () {},
-                              child: Image(
-                                  image: AssetImage("assets/image 603.png"))),
+                          Container(
+                            height: 45,
+                            width: 70,
+                            decoration: BoxDecoration(
+                                color: Color(0xffCBE9EF),
+                                borderRadius: BorderRadius.circular(5)),
+                            child: TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  "send",
+                                  style: TextStyle(fontSize: 17),
+                                )),
+                          ),
                         ],
                       ),
                     ],
