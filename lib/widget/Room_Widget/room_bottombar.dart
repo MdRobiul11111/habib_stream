@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habib_stream/widget/Room_Widget/Room_Profile_Gift_Page.dart';
 import 'package:habib_stream/widget/Room_Widget/inboxpage.dart';
 
 class RoomBottom extends StatefulWidget {
@@ -44,7 +45,13 @@ class _RoomBottomState extends State<RoomBottom> {
                 child: Image(image: AssetImage("assets/Group 2320.png"))),
             Spacer(),
             InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RoomProfileGiftPage(),
+                      ));
+                },
                 child: Image(image: AssetImage("assets/image 603.png"))),
           ],
         ),

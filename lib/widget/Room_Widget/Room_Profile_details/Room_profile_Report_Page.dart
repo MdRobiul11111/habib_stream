@@ -12,8 +12,8 @@ class _RoomProfileReportPageState extends State<RoomProfileReportPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff5E95A0),
       body: Container(
-        color: Color(0xff5E95A0),
         // decoration: BoxDecoration(
         //   image: DecorationImage(
         //       image: AssetImage("assets/image 1.png"), fit: BoxFit.cover),

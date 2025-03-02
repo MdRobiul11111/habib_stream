@@ -20,30 +20,105 @@ class _RoompageState extends State<Inboxpage> {
         ),
         child: ListView(
           children: [
-            Stack(
+            Column(
               children: [
-                Roomhomepage(),
-                Padding(
-                  padding: const EdgeInsets.only(left: 12, right: 12),
-                  child: Container(
-                    margin: EdgeInsets.only(top: 500),
-                    child: Row(
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                Stack(
+                  children: [
+                    Roomhomepage(),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12, right: 12),
+                      child: Container(
+                        margin: EdgeInsets.only(top: 500),
+                        child: Row(
                           children: [
-                            Container(
-                              height: 49,
-                              width: 247,
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image:
-                                          AssetImage("assets/Rectangle 43.png"),
-                                      fit: BoxFit.cover)),
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 7),
-                                child: Row(
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  height: 49,
+                                  width: 247,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              "assets/Rectangle 43.png"),
+                                          fit: BoxFit.cover)),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 7),
+                                    child: Row(
+                                      children: [
+                                        CircleAvatar(
+                                          child: Image(
+                                              image: AssetImage(
+                                                  "assets/image (29).png"),
+                                              fit: BoxFit.cover),
+                                        ),
+                                        SizedBox(
+                                          width: 7,
+                                        ),
+                                        Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            SizedBox(
+                                              height: 5,
+                                            ),
+                                            Row(
+                                              children: [
+                                                Text(
+                                                  "Habib Khan",
+                                                  style: TextStyle(
+                                                      // fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color: Colors.white),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              children: [
+                                                Text(
+                                                  "Send",
+                                                  style: TextStyle(
+                                                    // fontSize: 20,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Color(0xff80CDDD),
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  width: 2,
+                                                ),
+                                                Text(
+                                                  "Habib Khan",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color: Color(0xffFF8E00)),
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                        Image(
+                                            image: AssetImage(
+                                                "assets/image 604.png"),
+                                            fit: BoxFit.cover),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Text(
+                                          "X 1",
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.white),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Row(
                                   children: [
                                     CircleAvatar(
                                       child: Image(
@@ -72,35 +147,33 @@ class _RoompageState extends State<Inboxpage> {
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.white),
                                             ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Image(
+                                                image: AssetImage(
+                                                    "assets/Group 1658.png"),
+                                                fit: BoxFit.cover),
                                           ],
                                         ),
-                                        Row(
-                                          children: [
-                                            Text(
-                                              "Send",
+                                        Container(
+                                          height: 30,
+                                          width: 50,
+                                          decoration: BoxDecoration(
+                                              color: Color(0xff5C959F),
+                                              borderRadius:
+                                                  BorderRadius.circular(5)),
+                                          child: Center(
+                                            child: Text(
+                                              "Hi",
                                               style: TextStyle(
-                                                // fontSize: 20,
-                                                fontWeight: FontWeight.bold,
-                                                color: Color(0xff80CDDD),
-                                              ),
+                                                  // fontSize: 20,
+                                                  color: Colors.white),
                                             ),
-                                            SizedBox(
-                                              width: 2,
-                                            ),
-                                            Text(
-                                              "Habib Khan",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Color(0xffFF8E00)),
-                                            )
-                                          ],
+                                          ),
                                         ),
                                       ],
                                     ),
-                                    Image(
-                                        image:
-                                            AssetImage("assets/image 604.png"),
-                                        fit: BoxFit.cover),
                                     SizedBox(
                                       width: 5,
                                     ),
@@ -111,181 +184,121 @@ class _RoompageState extends State<Inboxpage> {
                                     ),
                                   ],
                                 ),
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                CircleAvatar(
-                                  child: Image(
-                                      image:
-                                          AssetImage("assets/image (29).png"),
-                                      fit: BoxFit.cover),
-                                ),
-                                SizedBox(
-                                  width: 7,
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                Row(
                                   children: [
+                                    CircleAvatar(
+                                      child: Image(
+                                          image: AssetImage(
+                                              "assets/image (29).png"),
+                                          fit: BoxFit.cover),
+                                    ),
                                     SizedBox(
-                                      height: 5,
+                                      width: 7,
                                     ),
-                                    Row(
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
-                                        Text(
-                                          "Habib Khan",
-                                          style: TextStyle(
-                                              // fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white),
-                                        ),
                                         SizedBox(
-                                          width: 5,
+                                          height: 5,
                                         ),
-                                        Image(
-                                            image: AssetImage(
-                                                "assets/Group 1658.png"),
-                                            fit: BoxFit.cover),
-                                      ],
-                                    ),
-                                    Container(
-                                      height: 30,
-                                      width: 50,
-                                      decoration: BoxDecoration(
-                                          color: Color(0xff5C959F),
-                                          borderRadius:
-                                              BorderRadius.circular(5)),
-                                      child: Center(
-                                        child: Text(
-                                          "Hi",
-                                          style: TextStyle(
-                                              // fontSize: 20,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                Text(
-                                  "X 1",
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                CircleAvatar(
-                                  child: Image(
-                                      image:
-                                          AssetImage("assets/image (29).png"),
-                                      fit: BoxFit.cover),
-                                ),
-                                SizedBox(
-                                  width: 7,
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Text(
-                                          "Habib Khan",
-                                          style: TextStyle(
-                                              // fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white),
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image(
-                                            image: AssetImage(
-                                                "assets/Group 1658.png"),
-                                            fit: BoxFit.cover),
-                                      ],
-                                    ),
-                                    Container(
-                                      height: 30,
-                                      width: 200,
-                                      decoration: BoxDecoration(
-                                          color: Color(0xff5C959F),
-                                          borderRadius:
-                                              BorderRadius.circular(5)),
-                                      child: Center(
-                                        child: Row(
+                                        Row(
                                           children: [
-                                            SizedBox(
-                                              width: 10,
-                                            ),
                                             Text(
-                                              "Send Habib Khan",
+                                              "Habib Khan",
                                               style: TextStyle(
                                                   // fontSize: 20,
+                                                  fontWeight: FontWeight.bold,
                                                   color: Colors.white),
-                                            ),
-                                            Container(
-                                              height: 20,
-                                              child: Image(
-                                                  image: AssetImage(
-                                                      "assets/image 604.png"),
-                                                  fit: BoxFit.cover),
                                             ),
                                             SizedBox(
-                                              width: 10,
+                                              width: 5,
                                             ),
-                                            Text(
-                                              "X 1",
-                                              style: TextStyle(
-                                                  color: Colors.white),
-                                            ),
+                                            Image(
+                                                image: AssetImage(
+                                                    "assets/Group 1658.png"),
+                                                fit: BoxFit.cover),
                                           ],
                                         ),
-                                      ),
+                                        Container(
+                                          height: 30,
+                                          width: 200,
+                                          decoration: BoxDecoration(
+                                              color: Color(0xff5C959F),
+                                              borderRadius:
+                                                  BorderRadius.circular(5)),
+                                          child: Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(
+                                                  width: 10,
+                                                ),
+                                                Text(
+                                                  "Send Habib Khan",
+                                                  style: TextStyle(
+                                                      // fontSize: 20,
+                                                      color: Colors.white),
+                                                ),
+                                                Container(
+                                                  height: 20,
+                                                  child: Image(
+                                                      image: AssetImage(
+                                                          "assets/image 604.png"),
+                                                      fit: BoxFit.cover),
+                                                ),
+                                                SizedBox(
+                                                  width: 10,
+                                                ),
+                                                Text(
+                                                  "X 1",
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),
                               ],
+                            ),
+                            Spacer(),
+                            Container(
+                              margin: EdgeInsets.only(top: 50),
+                              child: Column(
+                                children: [
+                                  InkWell(
+                                      onTap: () {},
+                                      child: Image(
+                                          image: AssetImage(
+                                              "assets/image 697.png"))),
+                                  SizedBox(
+                                    height: 7,
+                                  ),
+                                  InkWell(
+                                      onTap: () {},
+                                      child: Image(
+                                          image: AssetImage(
+                                              "assets/Group 2738.png"))),
+                                ],
+                              ),
                             ),
                           ],
                         ),
-                        Spacer(),
-                        Container(
-                          margin: EdgeInsets.only(top: 50),
-                          child: Column(
-                            children: [
-                              InkWell(
-                                  onTap: () {},
-                                  child: Image(
-                                      image:
-                                          AssetImage("assets/image 697.png"))),
-                              SizedBox(
-                                height: 7,
-                              ),
-                              InkWell(
-                                  onTap: () {},
-                                  child: Image(
-                                      image:
-                                          AssetImage("assets/Group 2738.png"))),
-                            ],
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
+                ),
+                SizedBox(
+                  height: 30,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 12, right: 12),
                   child: Container(
-                    margin: EdgeInsets.only(top: 695),
                     child: Row(
                       children: [
                         // ignore: sized_box_for_whitespace

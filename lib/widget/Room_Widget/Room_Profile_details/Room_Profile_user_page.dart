@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/Room_Widget/RoomHomePage.dart';
 import 'package:habib_stream/widget/Room_Widget/Room_Profile_details/Room_profile_Report_Page.dart';
 
+import '../Room_Profile_Gift_Page.dart';
+
 class RoomProfileUserPage extends StatefulWidget {
   const RoomProfileUserPage({super.key});
 
@@ -13,8 +15,8 @@ class _RoomProfileUserPageState extends State<RoomProfileUserPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff5E95A0),
       body: Container(
-        color: Color(0xff5E95A0),
         // decoration: BoxDecoration(
         //   image: DecorationImage(
         //       image: AssetImage("assets/image 1.png"), fit: BoxFit.cover),
@@ -310,7 +312,14 @@ class _RoomProfileUserPageState extends State<RoomProfileUserPage> {
                             ),
                             Spacer(),
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          RoomProfileGiftPage(),
+                                    ));
+                              },
                               child: SizedBox(
                                 height: 30,
                                 width: 30,
