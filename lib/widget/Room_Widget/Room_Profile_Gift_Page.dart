@@ -12,6 +12,7 @@ class _RoomProfileGiftPageState extends State<RoomProfileGiftPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff5E95A0),
       body: ListView(
         children: [
           Column(
@@ -485,7 +486,7 @@ class _RoomProfileGiftPageState extends State<RoomProfileGiftPage> {
                                 ),
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
