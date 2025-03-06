@@ -15,7 +15,6 @@ class _RoomBottomState extends State<RoomBottom> {
     return Padding(
       padding: const EdgeInsets.only(left: 12, right: 12),
       child: Container(
-        margin: EdgeInsets.only(top: 690),
         child: Row(
           children: [
             InkWell(

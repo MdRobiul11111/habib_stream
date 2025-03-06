@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/Room_Widget/Contribution_Daily_List.dart';
 import 'package:habib_stream/widget/Room_Widget/Room_Profile_details/Room_detail_page.dart';
+import 'package:habib_stream/widget/Room_Widget/Room_pk_page.dart';
 
 class Roomhomepage extends StatefulWidget {
   const Roomhomepage({super.key});
@@ -169,7 +170,13 @@ class _RoomhomepageState extends State<Roomhomepage> {
                     height: 10,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RoomPkPage(),
+                          ));
+                    },
                     child: Container(
                       height: 29,
                       width: 110,

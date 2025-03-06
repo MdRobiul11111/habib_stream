@@ -1,32 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/Room_Widget/RoomHomePage.dart';
+import 'package:habib_stream/widget/Room_Widget/pk_result_page/pk_result_page.dart';
 import 'package:habib_stream/widget/Room_Widget/room_bottombar.dart';
 
-class Roompage extends StatefulWidget {
-  const Roompage({super.key});
+class RoomPkPage extends StatefulWidget {
+  const RoomPkPage({super.key});
 
   @override
-  State<Roompage> createState() => _RoompageState();
+  State<RoomPkPage> createState() => _RoomPkPageState();
 }
 
-class _RoompageState extends State<Roompage> {
+class _RoomPkPageState extends State<RoomPkPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/image 1.png"), fit: BoxFit.cover),
-        ),
-        child: ListView(
+        color: Color(0xff55919E),
+        // decoration: BoxDecoration(
+        //   image: DecorationImage(
+        //       image: AssetImage("assets/image 1.png"), fit: BoxFit.cover),
+        // ),
+        child: Stack(
           children: [
-            Stack(
+            ListView(
               children: [
                 Roomhomepage(),
                 Padding(
                   padding: const EdgeInsets.only(left: 12, right: 12),
                   child: Container(
-                    margin: EdgeInsets.only(top: 500),
                     child: Row(
                       children: [
                         Column(
@@ -107,7 +108,8 @@ class _RoompageState extends State<Roompage> {
                                     Text(
                                       "X 1",
                                       style: TextStyle(
-                                          fontSize: 20, color: Colors.white),
+                                          fontSize: 20,
+                                          color: Color(0xffA7B1B3)),
                                     ),
                                   ],
                                 ),
@@ -115,12 +117,9 @@ class _RoompageState extends State<Roompage> {
                             ),
                             Row(
                               children: [
-                                CircleAvatar(
-                                  child: Image(
-                                      image:
-                                          AssetImage("assets/image (29).png"),
-                                      fit: BoxFit.cover),
-                                ),
+                                Image(
+                                    image: AssetImage("assets/image (29).png"),
+                                    fit: BoxFit.cover),
                                 SizedBox(
                                   width: 7,
                                 ),
@@ -138,7 +137,7 @@ class _RoompageState extends State<Roompage> {
                                           style: TextStyle(
                                               // fontSize: 20,
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.white),
+                                              color: Color(0xffA7B1B3)),
                                         ),
                                         SizedBox(
                                           width: 5,
@@ -161,33 +160,22 @@ class _RoompageState extends State<Roompage> {
                                           "Hi",
                                           style: TextStyle(
                                               // fontSize: 20,
-                                              color: Colors.white),
+                                              color: Color(0xffA7B1B3)),
                                         ),
                                       ),
                                     ),
                                   ],
                                 ),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                Text(
-                                  "X 1",
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
-                                ),
                               ],
                             ),
                             Row(
                               children: [
-                                CircleAvatar(
-                                  child: Image(
-                                      image:
-                                          AssetImage("assets/image (29).png"),
-                                      fit: BoxFit.cover),
-                                ),
                                 SizedBox(
                                   width: 7,
                                 ),
+                                Image(
+                                    image: AssetImage("assets/image (29).png"),
+                                    fit: BoxFit.cover),
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,11 +186,11 @@ class _RoompageState extends State<Roompage> {
                                     Row(
                                       children: [
                                         Text(
-                                          "Habib Khan",
+                                          "  Habib Khan",
                                           style: TextStyle(
                                               // fontSize: 20,
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.white),
+                                              color: Color(0xffA7B1B3)),
                                         ),
                                         SizedBox(
                                           width: 5,
@@ -230,9 +218,9 @@ class _RoompageState extends State<Roompage> {
                                               "Send Habib Khan",
                                               style: TextStyle(
                                                   // fontSize: 20,
-                                                  color: Colors.white),
+                                                  color: Color(0xffA7B1B3)),
                                             ),
-                                            Container(
+                                            SizedBox(
                                               height: 20,
                                               child: Image(
                                                   image: AssetImage(
@@ -245,7 +233,7 @@ class _RoompageState extends State<Roompage> {
                                             Text(
                                               "X 1",
                                               style: TextStyle(
-                                                  color: Colors.white),
+                                                  color: Color(0xffA7B1B3)),
                                             ),
                                           ],
                                         ),
@@ -257,35 +245,15 @@ class _RoompageState extends State<Roompage> {
                             ),
                           ],
                         ),
-                        Spacer(),
-                        Container(
-                          margin: EdgeInsets.only(top: 50),
-                          child: Column(
-                            children: [
-                              InkWell(
-                                  onTap: () {},
-                                  child: Image(
-                                      image:
-                                          AssetImage("assets/image 697.png"))),
-                              SizedBox(
-                                height: 7,
-                              ),
-                              InkWell(
-                                  onTap: () {},
-                                  child: Image(
-                                      image:
-                                          AssetImage("assets/Group 2738.png"))),
-                            ],
-                          ),
-                        ),
                       ],
                     ),
                   ),
                 ),
                 Container(
-                    margin: EdgeInsets.only(top: 700), child: RoomBottom()),
+                    margin: EdgeInsets.only(top: 10), child: RoomBottom()),
               ],
             ),
+            PkResultPage()
           ],
         ),
       ),
