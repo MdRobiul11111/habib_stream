@@ -379,7 +379,7 @@ class _RoomProfileGiftPageState extends State<RoomProfileGiftPage> {
                                 onTap: () {},
                                 child: Row(
                                   children: [
-                                    Container(
+                                    SizedBox(
                                       height: 25,
                                       width: 25,
                                       child: Image(
@@ -428,7 +428,7 @@ class _RoomProfileGiftPageState extends State<RoomProfileGiftPage> {
                                               BorderRadius.circular(20)),
                                       child: Row(
                                         children: [
-                                          Container(
+                                          SizedBox(
                                             height: 45,
                                             width: 85,
                                             child: InkWell(

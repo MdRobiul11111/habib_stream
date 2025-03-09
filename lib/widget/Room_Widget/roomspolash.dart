@@ -265,6 +265,7 @@ class _RoompageState extends State<Roomspolash> {
                                                   // fontSize: 20,
                                                   color: Colors.white),
                                             ),
+                                            // ignore: sized_box_for_whitespace
                                             Container(
                                               height: 20,
                                               child: Image(
