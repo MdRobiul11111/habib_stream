@@ -28,7 +28,7 @@ class _LuckyBagState extends State<LuckyBag> {
               )
             ],
           ),
-          Container(
+          SizedBox(
               height: 600,
               width: 500,
               child: Image(
@@ -36,191 +36,244 @@ class _LuckyBagState extends State<LuckyBag> {
                 fit: BoxFit.cover,
               )),
           Container(
-            margin: EdgeInsets.only(top: 475),
-            width: 400,
+            margin: EdgeInsets.only(top: 425),
+            width: 450,
             decoration: BoxDecoration(
-                color: Colors.white,
+                image: DecorationImage(
+                    image: AssetImage("assets/image (83).png"),
+                    fit: BoxFit.cover),
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20))),
             child: Column(
               children: [
-                Spacer(),
+                Container(
+                    height: 46,
+                    width: 191,
+                    decoration: BoxDecoration(
+                        color: Color(0xff6A181A),
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(10),
+                            bottomRight: Radius.circular(10))),
+                    child: Center(
+                        child: Text(
+                      "Luck Bag",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ))),
+                SizedBox(
+                  height: 18,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(left: 12, right: 12),
-                  child: Row(
-                    children: [
-                      Text(
-                        "Party",
-                        style: TextStyle(fontSize: 20, color: Colors.black),
-                      ),
-                      Spacer(),
-                      InkWell(
-                          onTap: () {},
-                          child:
-                              Image(image: AssetImage("assets/image 803.png"))),
-                    ],
+                  child: Container(
+                    height: 292,
+                    width: 410,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(10))),
+                    child: ListView(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 12, right: 12),
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Text("Diamond Amount"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: [
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      height: 34,
+                                      width: 78,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Color(0xff6A181A)),
+                                      child: Center(
+                                          child: Text(
+                                        "100",
+                                        style: TextStyle(color: Colors.white),
+                                      )),
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      height: 34,
+                                      width: 78,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Color(0xffF1F1F1)),
+                                      child: Center(
+                                          child: Text(
+                                        "100",
+                                        style:
+                                            TextStyle(color: Color(0xff6A181A)),
+                                      )),
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      height: 34,
+                                      width: 78,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Color(0xffF1F1F1)),
+                                      child: Center(
+                                          child: Text(
+                                        "100",
+                                        style:
+                                            TextStyle(color: Color(0xff6A181A)),
+                                      )),
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      height: 34,
+                                      width: 78,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Color(0xffF1F1F1)),
+                                      child: Center(
+                                          child: Text(
+                                        "100",
+                                        style:
+                                            TextStyle(color: Color(0xff6A181A)),
+                                      )),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              Row(
+                                children: [
+                                  Text("Number of people"),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: [
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      height: 34,
+                                      width: 78,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Color(0xff6A181A)),
+                                      child: Center(
+                                          child: Text(
+                                        "5",
+                                        style: TextStyle(color: Colors.white),
+                                      )),
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      height: 34,
+                                      width: 78,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Color(0xffF1F1F1)),
+                                      child: Center(
+                                          child: Text(
+                                        "10",
+                                        style:
+                                            TextStyle(color: Color(0xff6A181A)),
+                                      )),
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      height: 34,
+                                      width: 78,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Color(0xffF1F1F1)),
+                                      child: Center(
+                                          child: Text(
+                                        "30",
+                                        style:
+                                            TextStyle(color: Color(0xff6A181A)),
+                                      )),
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      height: 34,
+                                      width: 78,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Color(0xffF1F1F1)),
+                                      child: Center(
+                                          child: Text(
+                                        "50",
+                                        style:
+                                            TextStyle(color: Color(0xff6A181A)),
+                                      )),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 50,
+                              ),
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  height: 48,
+                                  width: 350,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      color: Color(0xff6A181A)),
+                                  child: Center(
+                                      child: Text(
+                                    "Send",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  )),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(left: 12, right: 12),
-                  child: Row(
-                    children: [
-                      Column(
-                        children: [
-                          InkWell(
-                              onTap: () {},
-                              child: SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: Image(
-                                    image: AssetImage("assets/image (78).png")),
-                              )),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "Lucky bag",
-                            style: TextStyle(color: Colors.black),
-                          )
-                        ],
-                      ),
-                      Spacer(),
-                      Column(
-                        children: [
-                          InkWell(
-                              onTap: () {},
-                              child: SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: Image(
-                                    image: AssetImage("assets/image (79).png")),
-                              )),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "Mic pk",
-                            style: TextStyle(color: Colors.black),
-                          )
-                        ],
-                      ),
-                      Spacer(),
-                      Column(
-                        children: [
-                          InkWell(
-                              onTap: () {},
-                              child: SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: Image(
-                                    image: AssetImage("assets/image (80).png")),
-                              )),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "Event center",
-                            style: TextStyle(color: Colors.black),
-                          )
-                        ],
-                      ),
-                      Spacer(),
-                      Column(
-                        children: [
-                          InkWell(
-                              onTap: () {},
-                              child: SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: Image(
-                                    image:
-                                        AssetImage("assets/image 630@2x.png")),
-                              )),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "Lucky number",
-                            style: TextStyle(color: Colors.black),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(left: 12, right: 12),
-                  child: Row(
-                    children: [
-                      Column(
-                        children: [
-                          InkWell(
-                              onTap: () {},
-                              child: SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: Image(
-                                    image: AssetImage("assets/image (81).png")),
-                              )),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "Setbbbting",
-                            style: TextStyle(color: Colors.black),
-                          )
-                        ],
-                      ),
-                      Spacer(),
-                      Column(
-                        children: [
-                          InkWell(
-                              onTap: () {},
-                              child: SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: Image(
-                                    image: AssetImage("assets/image (82).png")),
-                              )),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "Lucky fruit",
-                            style: TextStyle(color: Colors.black),
-                          )
-                        ],
-                      ),
-                      Spacer(),
-                      Column(
-                        children: [
-                          InkWell(
-                              onTap: () {},
-                              child: SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: Image(
-                                    image: AssetImage("assets/image@2x.png")),
-                              )),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "Private room",
-                            style: TextStyle(color: Colors.black),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        width: 110,
-                      ),
-                    ],
-                  ),
-                ),
-                Spacer(),
+                )
               ],
             ),
           ),
