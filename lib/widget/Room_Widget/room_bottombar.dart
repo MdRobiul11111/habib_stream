@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/Emoji_Page/Emoji_bottombar.dart';
+import 'package:habib_stream/widget/Room_Party_Page/Party_Page.dart';
 import 'package:habib_stream/widget/Room_Widget/Room_Profile_Gift_Page.dart';
 import 'package:habib_stream/widget/Room_Widget/inboxpage.dart';
 
@@ -47,7 +48,13 @@ class _RoomBottomState extends State<RoomBottom> {
                 child: Image(image: AssetImage("assets/Group 2319.png"))),
             Spacer(),
             InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PartyPage(),
+                      ));
+                },
                 child: Image(image: AssetImage("assets/Group 2320.png"))),
             Spacer(),
             InkWell(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/Room_Party_Page/Lucky_bag.dart';
+import 'package:habib_stream/widget/Room_Party_Page/Room_setting_Page.dart';
 import 'package:habib_stream/widget/Room_Widget/RoomHomePage.dart';
 
 class PartyPage extends StatefulWidget {
@@ -165,7 +166,13 @@ class _PartyPageState extends State<PartyPage> {
                       Column(
                         children: [
                           InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => RoomSettingPage(),
+                                    ));
+                              },
                               child: SizedBox(
                                 height: 30,
                                 width: 30,

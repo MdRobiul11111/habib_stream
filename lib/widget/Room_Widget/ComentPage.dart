@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/widget/Room_Party_Page/Party_Page.dart';
 import 'package:habib_stream/widget/Room_Widget/RoomHomePage.dart';
 import 'package:habib_stream/widget/Room_Widget/room_bottombar.dart';
 
@@ -265,11 +264,7 @@ class _RoompageState extends State<Roompage> {
                             children: [
                               InkWell(
                                   onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => PartyPage(),
-                                        ));
+                                   
                                   },
                                   child: Image(
                                       image:
