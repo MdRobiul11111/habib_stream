@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habib_stream/widget/Room_Party_Page/Diamond_open_page.dart';
 import 'package:habib_stream/widget/Room_Widget/RoomHomePage.dart';
 
 class LuckyBag extends StatefulWidget {
@@ -250,7 +251,13 @@ class _LuckyBagState extends State<LuckyBag> {
                                 height: 50,
                               ),
                               InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => DiamondOpenPage(),
+                                      ));
+                                },
                                 child: Container(
                                   height: 48,
                                   width: 350,
