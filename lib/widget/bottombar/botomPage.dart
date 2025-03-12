@@ -1,10 +1,12 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/HomePage/Home_page.dart';
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _HomeState createState() => _HomeState();
 }
 

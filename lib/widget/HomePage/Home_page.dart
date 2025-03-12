@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/All_Country_Page/All_country_page.dart';
 import 'package:habib_stream/widget/HomePage/MainWidget/MainPage.dart';
+import 'package:habib_stream/widget/HomePage/Top_Global_widget/Top_Party_Page.dart';
 import 'package:habib_stream/widget/Room_Widget/roomspolash.dart';
 import 'package:habib_stream/widget/searchPage/searchPage.dart';
 
@@ -101,11 +102,20 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Row(
                       children: [
-                        SizedBox(
-                          width: 124,
-                          child: Image(
-                            image: AssetImage("assets/Group 1360.png"),
-                            fit: BoxFit.cover,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => TopPartyPage(),
+                                ));
+                          },
+                          child: SizedBox(
+                            width: 124,
+                            child: Image(
+                              image: AssetImage("assets/Group 1360.png"),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                         Spacer(),

@@ -6,9 +6,10 @@ import 'package:habib_stream/widget/Emoji_Page/Emoji_cry_page.dart';
 import 'package:habib_stream/widget/Emoji_Page/Emoji_smile_page.dart';
 
 class EmojiBottombar extends StatefulWidget {
-  EmojiBottombar({Key? key}) : super(key: key);
+  const EmojiBottombar({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _EmojiBottombarState createState() => _EmojiBottombarState();
 }
 
