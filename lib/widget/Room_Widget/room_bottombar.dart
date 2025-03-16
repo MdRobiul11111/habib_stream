@@ -16,58 +16,56 @@ class _RoomBottomState extends State<RoomBottom> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 12, right: 12),
-      child: Container(
-        child: Row(
-          children: [
-            InkWell(
-                onTap: () {},
-                child: Image(image: AssetImage("assets/Group 2316.png"))),
-            Spacer(),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Inboxpage(),
-                      ));
-                },
-                child: Image(image: AssetImage("assets/Group 2317.png"))),
-            Spacer(),
-            InkWell(
-                onTap: () {},
-                child: Image(image: AssetImage("assets/Group 2318.png"))),
-            Spacer(),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => EmojiBottombar(),
-                      ));
-                },
-                child: Image(image: AssetImage("assets/Group 2319.png"))),
-            Spacer(),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => PartyPage(),
-                      ));
-                },
-                child: Image(image: AssetImage("assets/Group 2320.png"))),
-            Spacer(),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => RoomProfileGiftPage(),
-                      ));
-                },
-                child: Image(image: AssetImage("assets/image 603.png"))),
-          ],
-        ),
+      child: Row(
+        children: [
+          InkWell(
+              onTap: () {},
+              child: Image(image: AssetImage("assets/Group 2316.png"))),
+          Spacer(),
+          InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Inboxpage(),
+                    ));
+              },
+              child: Image(image: AssetImage("assets/Group 2317.png"))),
+          Spacer(),
+          InkWell(
+              onTap: () {},
+              child: Image(image: AssetImage("assets/Group 2318.png"))),
+          Spacer(),
+          InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => EmojiBottombar(),
+                    ));
+              },
+              child: Image(image: AssetImage("assets/Group 2319.png"))),
+          Spacer(),
+          InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PartyPage(),
+                    ));
+              },
+              child: Image(image: AssetImage("assets/Group 2320.png"))),
+          Spacer(),
+          InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RoomProfileGiftPage(),
+                    ));
+              },
+              child: Image(image: AssetImage("assets/image 603.png"))),
+        ],
       ),
     );
   }

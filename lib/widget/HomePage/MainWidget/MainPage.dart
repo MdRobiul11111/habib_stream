@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/HomePage/MainWidget/FollowPage.dart';
 import 'package:habib_stream/widget/HomePage/MainWidget/FriendsPage.dart';
 import 'package:habib_stream/widget/HomePage/MainWidget/RecentlyPage.dart';
+import 'package:habib_stream/widget/searchPage/searchPage.dart';
 
 class Mainpage extends StatefulWidget {
   const Mainpage({super.key});
@@ -72,7 +73,13 @@ class _MainpageState extends State<Mainpage> {
               ),
               Spacer(),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Searchpage(),
+                        ));
+                  },
                   icon: Icon(
                     Icons.search,
                     size: 30,

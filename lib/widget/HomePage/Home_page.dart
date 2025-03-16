@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/All_Country_Page/All_country_page.dart';
+import 'package:habib_stream/widget/HomePage/Couple_Widget/coupol_global_widget/Couple_global_page.dart';
 import 'package:habib_stream/widget/HomePage/MainWidget/MainPage.dart';
-import 'package:habib_stream/widget/HomePage/Top_Global_widget/Top_Party_Page.dart';
-import 'package:habib_stream/widget/Room_Widget/roomspolash.dart';
+import 'package:habib_stream/widget/HomePage/Room_Gift_Widgets/Top_Global_widget/Top_Party_Page.dart';
+import 'package:habib_stream/widget/Room_Widget/Room_Create_page.dart/Create_Chatroom.dart';
+import 'package:habib_stream/widget/Room_Widget/Room_Page.dart';
 import 'package:habib_stream/widget/searchPage/searchPage.dart';
 
 class HomePage extends StatefulWidget {
@@ -72,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Roomspolash(),
+                          builder: (context) => CreateChatroom(),
                         ));
                   },
                   child: Image(image: AssetImage("assets/Mask group.png"))),
@@ -127,11 +129,20 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Spacer(),
-                        SizedBox(
-                          width: 124,
-                          child: Image(
-                            image: AssetImage("assets/Group 1362.png"),
-                            fit: BoxFit.cover,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => CoupleGlobalPage(),
+                                ));
+                          },
+                          child: SizedBox(
+                            width: 124,
+                            child: Image(
+                              image: AssetImage("assets/Group 1362.png"),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ],
@@ -227,119 +238,139 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Row(
                       children: [
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         Spacer(),
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -349,119 +380,139 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Row(
                       children: [
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         Spacer(),
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -471,119 +522,139 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Row(
                       children: [
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         Spacer(),
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -593,119 +664,139 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Row(
                       children: [
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         Spacer(),
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -715,119 +806,139 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Row(
                       children: [
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         Spacer(),
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -837,119 +948,139 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Row(
                       children: [
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         Spacer(),
-                        Container(
-                          height: 227,
-                          width: 180,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 2),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Image(
-                                image: AssetImage("assets/image (23).png"),
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        height: 27,
-                                        width: 27,
-                                        child: Image(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Roompage(),
+                                ));
+                          },
+                          child: Container(
+                            height: 227,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage("assets/image (23).png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 27,
+                                          width: 27,
+                                          child: Image(
+                                            image: AssetImage(
+                                                "assets/image 349.png"),
+                                            fit: BoxFit.cover,
+                                          )),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "Love Line",
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 3),
+                                  child: Row(
+                                    children: [
+                                      Image(
                                           image: AssetImage(
-                                              "assets/image 349.png"),
-                                          fit: BoxFit.cover,
-                                        )),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Text(
-                                      "Love Line",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                              "assets/Group 1854.png")),
+                                      SizedBox(
+                                        width: 3,
+                                      ),
+                                      Text(
+                                        "MR IBRAHIM",
+                                        style:
+                                            TextStyle(color: Color(0xff4D8894)),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: Row(
-                                  children: [
-                                    Image(
-                                        image: AssetImage(
-                                            "assets/Group 1854.png")),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Text(
-                                      "MR IBRAHIM",
-                                      style:
-                                          TextStyle(color: Color(0xff4D8894)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ],

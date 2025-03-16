@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/widget/Room_Widget/Contribution_Daily_List.dart';
+import 'package:habib_stream/widget/Room_Widget/Logout_Page.dart';
 import 'package:habib_stream/widget/Room_Widget/Room_Profile_details/Room_detail_page.dart';
 import 'package:habib_stream/widget/Room_Widget/Room_pk_page.dart';
 
@@ -116,7 +117,13 @@ class _RoomhomepageState extends State<Roomhomepage> {
               ),
               Spacer(),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LogoutPage(),
+                        ));
+                  },
                   icon: Icon(
                     Icons.logout,
                     size: 30,
@@ -224,22 +231,6 @@ class _RoomhomepageState extends State<Roomhomepage> {
                 ],
               ),
               Spacer(),
-              Column(
-                children: [
-                  Image(image: AssetImage("assets/Group 825.png")),
-                  Text("Habib khan"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
               Stack(
                 children: [
                   Image(image: AssetImage("assets/image 257943.png")),
@@ -271,7 +262,6 @@ class _RoomhomepageState extends State<Roomhomepage> {
                   ),
                 ],
               ),
-              Spacer(),
             ],
           ),
           SizedBox(
@@ -312,7 +302,7 @@ class _RoomhomepageState extends State<Roomhomepage> {
                       color: Color(0xff4B747B),
                     ),
                   ),
-                  Text("1"),
+                  Text("2"),
                   Row(
                     children: [
                       Image(image: AssetImage("assets/image (28).png")),
@@ -335,7 +325,7 @@ class _RoomhomepageState extends State<Roomhomepage> {
                       color: Color(0xff4B747B),
                     ),
                   ),
-                  Text("1"),
+                  Text("3"),
                   Row(
                     children: [
                       Image(image: AssetImage("assets/image (28).png")),
@@ -358,30 +348,7 @@ class _RoomhomepageState extends State<Roomhomepage> {
                       color: Color(0xff4B747B),
                     ),
                   ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
+                  Text("4"),
                   Row(
                     children: [
                       Image(image: AssetImage("assets/image (28).png")),
@@ -410,7 +377,7 @@ class _RoomhomepageState extends State<Roomhomepage> {
                       color: Color(0xff4B747B),
                     ),
                   ),
-                  Text("1"),
+                  Text("5"),
                   Row(
                     children: [
                       Image(image: AssetImage("assets/image (28).png")),
@@ -433,7 +400,7 @@ class _RoomhomepageState extends State<Roomhomepage> {
                       color: Color(0xff4B747B),
                     ),
                   ),
-                  Text("1"),
+                  Text("6"),
                   Row(
                     children: [
                       Image(image: AssetImage("assets/image (28).png")),
@@ -456,7 +423,7 @@ class _RoomhomepageState extends State<Roomhomepage> {
                       color: Color(0xff4B747B),
                     ),
                   ),
-                  Text("1"),
+                  Text("7"),
                   Row(
                     children: [
                       Image(image: AssetImage("assets/image (28).png")),
@@ -479,272 +446,7 @@ class _RoomhomepageState extends State<Roomhomepage> {
                       color: Color(0xff4B747B),
                     ),
                   ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Row(
-            children: [
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Row(
-            children: [
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("1"),
+                  Text("8"),
                   Row(
                     children: [
                       Image(image: AssetImage("assets/image (28).png")),

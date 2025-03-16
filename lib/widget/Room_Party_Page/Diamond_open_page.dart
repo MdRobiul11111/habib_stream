@@ -234,7 +234,7 @@ class _DiamondOpenPageState extends State<DiamondOpenPage> {
                                             // fontSize: 20,
                                             color: Colors.white),
                                       ),
-                                      Container(
+                                      SizedBox(
                                         height: 20,
                                         child: Image(
                                             image: AssetImage(
@@ -287,7 +287,7 @@ class _DiamondOpenPageState extends State<DiamondOpenPage> {
               ),
             ),
           ),
-          Container(
+          SizedBox(
               height: 935,
               width: 500,
               child: Image(

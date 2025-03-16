@@ -439,7 +439,7 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -565,7 +565,7 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -691,7 +691,7 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -817,7 +817,7 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -943,7 +943,7 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -1069,7 +1069,7 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -1195,7 +1195,7 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -1321,7 +1321,7 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(

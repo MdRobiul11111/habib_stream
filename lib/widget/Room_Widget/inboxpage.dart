@@ -241,6 +241,7 @@ class _RoompageState extends State<Inboxpage> {
                                                       // fontSize: 20,
                                                       color: Colors.white),
                                                 ),
+                                                // ignore: sized_box_for_whitespace
                                                 Container(
                                                   height: 20,
                                                   child: Image(

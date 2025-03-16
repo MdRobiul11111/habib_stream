@@ -438,7 +438,7 @@ class _ContributionWeeklyListState extends State<ContributionWeeklyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -564,7 +564,7 @@ class _ContributionWeeklyListState extends State<ContributionWeeklyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -690,7 +690,7 @@ class _ContributionWeeklyListState extends State<ContributionWeeklyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -816,7 +816,7 @@ class _ContributionWeeklyListState extends State<ContributionWeeklyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -942,7 +942,7 @@ class _ContributionWeeklyListState extends State<ContributionWeeklyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -1068,7 +1068,7 @@ class _ContributionWeeklyListState extends State<ContributionWeeklyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -1194,7 +1194,7 @@ class _ContributionWeeklyListState extends State<ContributionWeeklyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -1320,7 +1320,7 @@ class _ContributionWeeklyListState extends State<ContributionWeeklyList> {
                                             BorderRadius.circular(20)),
                                     child: Row(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: 20,
                                           width: 20,
                                           child: Image(
@@ -1359,7 +1359,7 @@ class _ContributionWeeklyListState extends State<ContributionWeeklyList> {
                         borderRadius: BorderRadius.circular(20)),
                     child: Row(
                       children: [
-                        Container(
+                        SizedBox(
                             height: 45,
                             width: 85,
                             child: InkWell(
