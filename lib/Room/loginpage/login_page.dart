@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/room/loginpage/loginPage2.dart';
+import 'package:habib_stream/room/loginpage/login_page_2.dart';
 
 class Loginpage1 extends StatefulWidget {
   const Loginpage1({super.key});
