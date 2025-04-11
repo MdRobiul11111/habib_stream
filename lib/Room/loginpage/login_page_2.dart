@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/Room/bottombar/botomPage.dart';
-import 'package:habib_stream/Room/loginpage/ForgetPage.dart';
-import 'package:habib_stream/Room/loginpage/loginPage1.dart';
+import 'package:habib_stream/room/bottombar/botomPage.dart';
+import 'package:habib_stream/room/loginpage/ForgetPage.dart';
+import 'package:habib_stream/room/loginpage/login_page.dart';
 
 class Loginpage2 extends StatefulWidget {
   const Loginpage2({super.key});

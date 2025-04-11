@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/Room/Room_Party_Page/Lucky_bag.dart';
-import 'package:habib_stream/Room/Room_Party_Page/Room_setting_Page.dart';
-import 'package:habib_stream/Room/Room_Widget/RoomHomePage.dart';
+import 'package:habib_stream/room/Room_Party_Page/Lucky_bag.dart';
+import 'package:habib_stream/room/Room_Party_Page/Room_setting_Page.dart';
+import 'package:habib_stream/room/Room_Widget/RoomHomePage.dart';
 
 class PartyPage extends StatefulWidget {
   const PartyPage({super.key});

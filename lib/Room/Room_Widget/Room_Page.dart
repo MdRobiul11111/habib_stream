@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/Room/Room_Widget/RoomHomePage.dart';
-import 'package:habib_stream/Room/Room_Widget/commentPage.dart';
-import 'package:habib_stream/Room/Room_Widget/room_bottombar.dart';
+import 'package:habib_stream/room/Room_Widget/RoomHomePage.dart';
+import 'package:habib_stream/room/Room_Widget/commentPage.dart';
+import 'package:habib_stream/room/Room_Widget/room_bottombar.dart';
 
 class Roompage extends StatefulWidget {
   const Roompage({super.key});

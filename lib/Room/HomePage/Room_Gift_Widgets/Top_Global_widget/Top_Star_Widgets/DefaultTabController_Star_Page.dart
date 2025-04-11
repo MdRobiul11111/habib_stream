@@ -1,8 +1,8 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
-import 'package:habib_stream/Room/HomePage/Room_Gift_Widgets/Top_Global_widget/Top_Party_widget/Top_Party_Daily_Page.dart';
-import 'package:habib_stream/Room/HomePage/Room_Gift_Widgets/Top_Global_widget/Top_Party_widget/Top_Party_Monthly_Page.dart';
-import 'package:habib_stream/Room/HomePage/Room_Gift_Widgets/Top_Global_widget/Top_Party_widget/Top_Party_Weekly_Page.dart';
+import 'package:habib_stream/room/HomePage/Room_Gift_Widgets/Top_Global_widget/Top_Party_widget/Top_Party_Daily_Page.dart';
+import 'package:habib_stream/room/HomePage/Room_Gift_Widgets/Top_Global_widget/Top_Party_widget/Top_Party_Monthly_Page.dart';
+import 'package:habib_stream/room/HomePage/Room_Gift_Widgets/Top_Global_widget/Top_Party_widget/Top_Party_Weekly_Page.dart';
 
 class DefaulttabcontrollerStarPage extends StatefulWidget {
   const DefaulttabcontrollerStarPage({super.key});

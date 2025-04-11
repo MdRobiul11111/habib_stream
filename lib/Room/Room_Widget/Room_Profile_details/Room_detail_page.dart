@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/Room/Room_Widget/RoomHomePage.dart';
-import 'package:habib_stream/Room/Room_Widget/Room_Profile_details/Room_Profile_user_page.dart';
+import 'package:habib_stream/room/Room_Widget/RoomHomePage.dart';
+import 'package:habib_stream/room/Room_Widget/Room_Profile_details/Room_Profile_user_page.dart';
 
 class RoomDetails extends StatefulWidget {
   const RoomDetails({super.key});

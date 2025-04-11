@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/Room/bottombar/botomPage.dart';
-import 'package:habib_stream/Room/loginpage/ForgetPage.dart';
+import 'package:habib_stream/room/bottombar/botomPage.dart';
+import 'package:habib_stream/room/loginpage/ForgetPage.dart';
 
 class Retypepassword extends StatefulWidget {
   const Retypepassword({super.key});
