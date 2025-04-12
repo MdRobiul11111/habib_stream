@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/loginpage/login_page_2.dart';
+import 'package:habib_stream/presentation/room/loginpage/email_login_page.dart';
 
-class Loginpage1 extends StatefulWidget {
-  const Loginpage1({super.key});
+class SocialLogin extends StatefulWidget {
+  const SocialLogin({super.key});
 
   @override
-  State<Loginpage1> createState() => _Loginpage1State();
+  State<SocialLogin> createState() => _SocialLoginState();
 }
 
-class _Loginpage1State extends State<Loginpage1> {
+class _SocialLoginState extends State<SocialLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,7 +112,7 @@ class _Loginpage1State extends State<Loginpage1> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Loginpage2(),
+                                    builder: (context) => EmailLogin(),
                                   ));
                             },
                             icon: Icon(

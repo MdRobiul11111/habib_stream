@@ -1,17 +1,14 @@
-// ignore: file_names
-// ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/home_page/home_page.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
-  _HomeState createState() => _HomeState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomeState extends State<Home> with TickerProviderStateMixin {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late TabController tabController;
   int selectedIndex = 0;
 

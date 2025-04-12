@@ -8,10 +8,9 @@ import 'package:habib_stream/repository/logger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final authProvider =
-    AutoDisposeAsyncNotifierProvider<AuthNotifier, UserProfile?>(
-        AuthNotifier.new);
+    AsyncNotifierProvider<AuthNotifier, UserProfile?>(AuthNotifier.new);
 
-class AuthNotifier extends AutoDisposeAsyncNotifier<UserProfile?> {
+class AuthNotifier extends AsyncNotifier<UserProfile?> {
   @override
   FutureOr<UserProfile?> build() async {
     final result =

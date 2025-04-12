@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/bottombar/botom_page.dart';
+import 'package:habib_stream/presentation/room/home/home_page.dart';
 import 'package:habib_stream/presentation/room/loginpage/forget_page.dart';
 
 class Retypepassword extends StatefulWidget {
@@ -106,7 +106,7 @@ class _RetypepasswordState extends State<Retypepassword> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Home(),
+                                builder: (context) => HomePage(),
                               ));
                         },
                         child: Text(

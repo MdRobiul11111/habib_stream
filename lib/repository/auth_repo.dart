@@ -12,7 +12,7 @@ class AuthRepo {
 
   Future<(UserProfile, String)> login(LoginBody body) async {
     try {
-      final response = await dio.post('/api/login', data: body.toMap());
+      final response = await dio.post('/api/signin', data: body.toMap());
       final tokenResponse = LoginResponse.fromMap(response.data);
       await tokenRepo.setAccessToken(tokenResponse.token);
       return (await getProfile(), tokenResponse.token);

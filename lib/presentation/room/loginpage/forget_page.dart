@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/loginpage/login_page_2.dart';
+import 'package:habib_stream/presentation/room/loginpage/email_login_page.dart';
 import 'package:habib_stream/presentation/room/loginpage/retype_password.dart';
 
 class Forgetpage extends StatefulWidget {
@@ -33,7 +33,7 @@ class _ForgetpageState extends State<Forgetpage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Loginpage2(),
+                                builder: (context) => EmailLogin(),
                               ));
                         },
                         icon: Icon(
