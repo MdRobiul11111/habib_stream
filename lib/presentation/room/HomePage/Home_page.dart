@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:habib_stream/presentation/room/all_country_page/all_country_page.dart';
 import 'package:habib_stream/presentation/room/HomePage/Couple_Widget/coupol_global_widget/Couple_global_page.dart';
 import 'package:habib_stream/presentation/room/HomePage/MainWidget/MainPage.dart';
-import 'package:habib_stream/presentation/room/HomePage/Room_Gift_Widgets/Top_Global_widget/Top_Party_Page.dart';
+import 'package:habib_stream/presentation/room/HomePage/room_gift_widget/Top_Global_widget/Top_Party_Page.dart';
 import 'package:habib_stream/presentation/room/My_Room_Create_page.dart/Create_Chatroom.dart';
 import 'package:habib_stream/presentation/room/Room_Widget/Room_Page.dart';
 import 'package:habib_stream/presentation/room/searchPage/searchPage.dart';
