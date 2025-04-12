@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/Room_Page.dart';
+import 'package:habib_stream/presentation/room/Room_Widget/room_page.dart';
 
 class Followpage extends StatefulWidget {
   const Followpage({super.key});
@@ -29,13 +29,7 @@ class _FollowpageState extends State<Followpage> {
                   Row(
                     children: [
                       InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Roompage(),
-                              ));
-                        },
+                        onTap: () {},
                         child: Container(
                           height: 227,
                           width: 180,
@@ -96,13 +90,7 @@ class _FollowpageState extends State<Followpage> {
                       ),
                       Spacer(),
                       InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Roompage(),
-                              ));
-                        },
+                        onTap: () {},
                         child: Container(
                           height: 227,
                           width: 180,
@@ -169,13 +157,7 @@ class _FollowpageState extends State<Followpage> {
                   Row(
                     children: [
                       InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Roompage(),
-                              ));
-                        },
+                        onTap: () {},
                         child: Container(
                           height: 227,
                           width: 180,
@@ -236,13 +218,7 @@ class _FollowpageState extends State<Followpage> {
                       ),
                       Spacer(),
                       InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Roompage(),
-                              ));
-                        },
+                        onTap: () {},
                         child: Container(
                           height: 227,
                           width: 180,

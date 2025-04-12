@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:habib_stream/application/room/rooms_provider.dart';
 import 'package:habib_stream/presentation/room/all_country_page/all_country_page.dart';
 import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_global_widget/Couple_global_page.dart';
 import 'package:habib_stream/presentation/room/home_page/MainWidget/MainPage.dart';
+import 'package:habib_stream/presentation/room/home_page/MainWidget/room_widget.dart';
 import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Party_Page.dart';
 import 'package:habib_stream/presentation/room/My_Room_Create_page.dart/Create_Chatroom.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/Room_Page.dart';
 import 'package:habib_stream/presentation/room/searchPage/searchPage.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends HookConsumerWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    final roomsState = ref.watch(roomsListProvider);
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -93,1003 +91,168 @@ class _HomePageState extends State<HomePage> {
             ),
             child: ListView(
               children: [
-                Column(
+                // roomsState.when(
+                //     data: (data) => Text(data.length.toString()),
+                //     error: (error, stackTrace) => Text("Error: $error"),
+                //     loading: () => CircularProgressIndicator()),
+                SizedBox(
+                  height: 5,
+                ),
+                Image(image: AssetImage("assets/image (22).png")),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
                   children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TopPartyPage(),
+                            ));
+                      },
+                      child: SizedBox(
+                        width: 124,
+                        child: Image(
+                          image: AssetImage("assets/Group 1360.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Spacer(),
                     SizedBox(
-                      height: 5,
+                      width: 124,
+                      child: Image(
+                        image: AssetImage("assets/Group 1361.png"),
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    Image(image: AssetImage("assets/image (22).png")),
-                    SizedBox(
-                      height: 10,
+                    Spacer(),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CoupleGlobalPage(),
+                            ));
+                      },
+                      child: SizedBox(
+                        width: 124,
+                        child: Image(
+                          image: AssetImage("assets/Group 1362.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => TopPartyPage(),
-                                ));
-                          },
-                          child: SizedBox(
-                            width: 124,
-                            child: Image(
-                              image: AssetImage("assets/Group 1360.png"),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Spacer(),
-                        SizedBox(
-                          width: 124,
-                          child: Image(
-                            image: AssetImage("assets/Group 1361.png"),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => CoupleGlobalPage(),
-                                ));
-                          },
-                          child: SizedBox(
-                            width: 124,
-                            child: Image(
-                              image: AssetImage("assets/Group 1362.png"),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          height: 35,
-                          width: 50,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Colors.white),
-                          child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "All",
-                                style: TextStyle(color: Colors.black),
-                              )),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Container(
-                          height: 35,
-                          width: 100,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Color(0xffE5EBEA)),
-                          child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Bangladesh",
-                                style: TextStyle(color: Colors.black),
-                              )),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Container(
-                          height: 35,
-                          width: 65,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Color(0xffE5EBEA)),
-                          child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Egypt",
-                                style: TextStyle(color: Colors.black),
-                              )),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Container(
-                          height: 35,
-                          width: 60,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Color(0xffE5EBEA)),
-                          child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Iraq",
-                                style: TextStyle(color: Colors.black),
-                              )),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => AllCountryPage(),
-                                ));
-                          },
-                          child: SizedBox(
-                            height: 30,
-                            width: 30,
-                            child: Image(
-                              image: AssetImage("assets/Mask group (1).png"),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Roompage(),
-                                ));
-                          },
-                          child: Container(
-                            height: 227,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage("assets/image (23).png"),
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                          height: 27,
-                                          width: 27,
-                                          child: Image(
-                                            image: AssetImage(
-                                                "assets/image 349.png"),
-                                            fit: BoxFit.cover,
-                                          )),
-                                      SizedBox(
-                                        width: 4,
-                                      ),
-                                      Text(
-                                        "Love Line",
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 3),
-                                  child: Row(
-                                    children: [
-                                      Image(
-                                          image: AssetImage(
-                                              "assets/Group 1854.png")),
-                                      SizedBox(
-                                        width: 3,
-                                      ),
-                                      Text(
-                                        "MR IBRAHIM",
-                                        style:
-                                            TextStyle(color: Color(0xff4D8894)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    )
                   ],
                 ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      height: 35,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white),
+                      child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "All",
+                            style: TextStyle(color: Colors.black),
+                          )),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Container(
+                      height: 35,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Color(0xffE5EBEA)),
+                      child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Bangladesh",
+                            style: TextStyle(color: Colors.black),
+                          )),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Container(
+                      height: 35,
+                      width: 65,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Color(0xffE5EBEA)),
+                      child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Egypt",
+                            style: TextStyle(color: Colors.black),
+                          )),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Container(
+                      height: 35,
+                      width: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Color(0xffE5EBEA)),
+                      child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Iraq",
+                            style: TextStyle(color: Colors.black),
+                          )),
+                    ),
+                    Spacer(),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => AllCountryPage(),
+                            ));
+                      },
+                      child: SizedBox(
+                        height: 30,
+                        width: 30,
+                        child: Image(
+                          image: AssetImage("assets/Mask group (1).png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                roomsState.when(
+                    data: (list) => GridView.builder(
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemCount: list.length,
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  mainAxisSpacing: 10,
+                                  crossAxisSpacing: 10,
+                                  childAspectRatio: .8),
+                          itemBuilder: (context, index) => RoomWidget(
+                            room: list[index],
+                          ),
+                        ),
+                    error: (error, stackTrace) => Text("Error: $error"),
+                    loading: () => Center(child: CircularProgressIndicator())),
               ],
             ),
           ),

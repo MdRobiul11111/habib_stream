@@ -24,6 +24,11 @@ class AuthRepo {
 
   Future<UserProfile> getProfile() async {
     try {
+      final token = tokenRepo.getAccessToken();
+      if (token == null) {
+        logger.e('Token is null');
+        throw Exception('Token is null');
+      }
       final response = await dio.get('/api/user-profile');
       final profile = UserProfile.fromMap(response.data['data']);
       return profile;

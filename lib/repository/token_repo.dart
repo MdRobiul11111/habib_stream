@@ -1,3 +1,4 @@
+import 'package:habib_stream/repository/logger.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -15,7 +16,8 @@ class TokenRepo {
   }
 
   Future<void> setAccessToken(String token) async {
-    sharedPreferences.setString('access_token', token);
+    logger.i('Setting access token: $token');
+    await sharedPreferences.setString('access_token', token);
   }
 
   Future<void> removeTokens() async {

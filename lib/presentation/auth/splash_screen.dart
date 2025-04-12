@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/application/auth/auth_provider.dart';
-import 'package:habib_stream/presentation/room/home/home_page.dart';
+import 'package:habib_stream/presentation/room/root/root_page.dart';
 import 'package:habib_stream/presentation/room/loginpage/social_login_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

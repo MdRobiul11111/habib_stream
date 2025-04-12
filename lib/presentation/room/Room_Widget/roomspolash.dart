@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/Room_Page.dart';
+import 'package:habib_stream/presentation/room/Room_Widget/room_page.dart';
 
 import 'RoomHomePage.dart';
 
@@ -19,8 +19,8 @@ class _RoompageState extends State<Roomspolash> {
     super.initState();
 
     Timer(Duration(seconds: 3), (() {
-      Navigator.pushReplacement(
-          _context, MaterialPageRoute(builder: (context) => Roompage()));
+      // Navigator.pushReplacement(
+      //     _context, MaterialPageRoute(builder: (context) => Roompage()));
     }));
   }
 

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:habib_stream/application/auth/auth_provider.dart';
+import 'package:habib_stream/application/core/token_provider.dart';
 import 'package:habib_stream/domain/auth/login_body.dart';
-import 'package:habib_stream/presentation/room/home/home_page.dart';
+import 'package:habib_stream/presentation/room/root/root_page.dart';
 import 'package:habib_stream/presentation/room/loginpage/forget_page.dart';
 import 'package:habib_stream/presentation/room/loginpage/social_login_page.dart';
+import 'package:habib_stream/repository/logger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class EmailLogin extends HookConsumerWidget {
@@ -133,12 +135,14 @@ class EmailLogin extends HookConsumerWidget {
                     children: [
                       Spacer(),
                       TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Forgetpage(),
-                              ));
+                        onPressed: () async {
+                          final token = await ref.read(tokenProvider.future);
+                          logger.d(token);
+                          // Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //       builder: (context) => Forgetpage(),
+                          //     ));
                         },
                         child: Text(
                           "Forget Password",

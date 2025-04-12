@@ -29,8 +29,6 @@ final dioProvider = AutoDisposeProvider<Dio>((ref) {
           final token = await ref.watch(tokenProvider.future);
           if (token != null) {
             options.headers['Authorization'] = 'Bearer $token';
-          } else {
-            ref.read(authProvider.notifier).logout();
           }
           return handler.next(options);
         } on DioException catch (e) {
