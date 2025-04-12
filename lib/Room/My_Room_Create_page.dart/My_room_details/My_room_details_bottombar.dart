@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/Room/Emoji_Page/Emoji_bottombar.dart';
 import 'package:habib_stream/Room/My_Room_Create_page.dart/My_room_details/My_Room_theme_page.dart';
-import 'package:habib_stream/Room/My_Room_Create_page.dart/inbox_widget/my_inboxpage.dart';
 
 class MyRoomDetailsBottombar extends StatefulWidget {
   const MyRoomDetailsBottombar({super.key});
@@ -22,11 +20,11 @@ class _MyRoomDetailsBottombarState extends State<MyRoomDetailsBottombar> {
           children: [
             InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => MyInboxpage(),
-                      ));
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //       builder: (context) => MyInboxpage(),
+                  //     ));
                 },
                 child: Column(
                   children: [
@@ -70,11 +68,11 @@ class _MyRoomDetailsBottombarState extends State<MyRoomDetailsBottombar> {
             Spacer(),
             InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => EmojiBottombar(),
-                      ));
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //       builder: (context) => EmojiBottombar(),
+                  //     ));
                 },
                 child: Column(
                   children: [

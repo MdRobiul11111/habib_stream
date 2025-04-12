@@ -38,7 +38,7 @@ class _RoomSettingPageState extends State<RoomSettingPage> {
               )),
           Container(
             margin: EdgeInsets.only(top: 520),
-            width: 400,
+            width: 600,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(

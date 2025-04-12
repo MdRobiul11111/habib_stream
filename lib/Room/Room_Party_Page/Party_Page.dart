@@ -30,7 +30,7 @@ class _PartyPageState extends State<PartyPage> {
               )
             ],
           ),
-          Container(
+          SizedBox(
               height: 600,
               width: 500,
               child: Image(
@@ -39,7 +39,7 @@ class _PartyPageState extends State<PartyPage> {
               )),
           Container(
             margin: EdgeInsets.only(top: 475),
-            width: 400,
+            width: 600,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
