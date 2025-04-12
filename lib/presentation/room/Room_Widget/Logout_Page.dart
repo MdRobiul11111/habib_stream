@@ -298,7 +298,7 @@ class _LogoutPageState extends State<LogoutPage> {
                 ),
               ],
             ),
-            Container(
+            SizedBox(
               // height: 932,
               width: 430,
               child: Image(

@@ -297,7 +297,7 @@ class _RoomhomepageState extends State<Roomhomepage> {
                     color: Color(0xff4B747B),
                   ),
                 ),
-                Text("1"),
+                Text('${index + 1}'),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

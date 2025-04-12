@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import 'package:dio_smart_retry/dio_smart_retry.dart';
-import 'package:habib_stream/application/auth/auth_provider.dart';
 import 'package:habib_stream/application/core/token_provider.dart';
 import 'package:habib_stream/repository/logger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

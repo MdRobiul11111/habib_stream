@@ -69,7 +69,7 @@ class _VideoRoomState extends State<VideoRoom> {
               ),
             ],
           ),
-          Container(
+          SizedBox(
             width: 500,
             child: Image(
               image: AssetImage("assets/Rectangle 34624560.png"),

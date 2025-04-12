@@ -21,7 +21,7 @@ class _CoupleGlobalPageState extends State<CoupleGlobalPage> {
         children: [
           Column(
             children: [
-              Container(
+              SizedBox(
                 height: 780,
                 width: double.infinity,
                 child: DefoldercontrollerPageccc(),
