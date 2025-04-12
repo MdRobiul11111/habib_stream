@@ -6,7 +6,8 @@ import 'package:habib_stream/presentation/room/Room_Widget/Room_Profile_details/
 import 'package:habib_stream/presentation/room/Room_Widget/Room_pk_page.dart';
 
 class Roomhomepage extends StatefulWidget {
-  const Roomhomepage({super.key});
+  final int userCount;
+  const Roomhomepage({super.key, this.userCount = 0});
 
   @override
   State<Roomhomepage> createState() => _RoomhomepageState();
@@ -277,199 +278,232 @@ class _RoomhomepageState extends State<Roomhomepage> {
           SizedBox(
             height: 5,
           ),
-          Row(
-            children: [
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
+          GridView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemCount: 8,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 4,
+            ),
+            itemBuilder: (context, index) => Column(
+              children: [
+                InkWell(
+                  onTap: () {},
+                  child: Icon(
+                    index + 1 <= widget.userCount
+                        ? Icons.person
+                        : Icons.add_circle,
+                    size: 50,
+                    color: Color(0xff4B747B),
+                  ),
+                ),
+                Text("1"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image(image: AssetImage("assets/image (28).png")),
+                    SizedBox(
+                      width: 3,
                     ),
-                  ),
-                  Text("1"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("2"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("3"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("4"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Row(
-            children: [
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("5"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("6"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("7"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  )
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Icon(
-                      Icons.add_circle,
-                      size: 50,
-                      color: Color(0xff4B747B),
-                    ),
-                  ),
-                  Text("8"),
-                  Row(
-                    children: [
-                      Image(image: AssetImage("assets/image (28).png")),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      Text("0"),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
+                    Text("0"),
+                  ],
+                )
+              ],
+            ),
+          )
+          // Row(
+          //   children: [
+          //     Column(
+          //       children: [
+          //         InkWell(
+          //           onTap: () {},
+          //           child: Icon(
+          //             Icons.add_circle,
+          //             size: 50,
+          //             color: Color(0xff4B747B),
+          //           ),
+          //         ),
+          //         Text("1"),
+          //         Row(
+          //           children: [
+          //             Image(image: AssetImage("assets/image (28).png")),
+          //             SizedBox(
+          //               width: 3,
+          //             ),
+          //             Text("0"),
+          //           ],
+          //         )
+          //       ],
+          //     ),
+          //     Spacer(),
+          //     Column(
+          //       children: [
+          //         InkWell(
+          //           onTap: () {},
+          //           child: Icon(
+          //             Icons.add_circle,
+          //             size: 50,
+          //             color: Color(0xff4B747B),
+          //           ),
+          //         ),
+          //         Text("2"),
+          //         Row(
+          //           children: [
+          //             Image(image: AssetImage("assets/image (28).png")),
+          //             SizedBox(
+          //               width: 3,
+          //             ),
+          //             Text("0"),
+          //           ],
+          //         )
+          //       ],
+          //     ),
+          //     Spacer(),
+          //     Column(
+          //       children: [
+          //         InkWell(
+          //           onTap: () {},
+          //           child: Icon(
+          //             Icons.add_circle,
+          //             size: 50,
+          //             color: Color(0xff4B747B),
+          //           ),
+          //         ),
+          //         Text("3"),
+          //         Row(
+          //           children: [
+          //             Image(image: AssetImage("assets/image (28).png")),
+          //             SizedBox(
+          //               width: 3,
+          //             ),
+          //             Text("0"),
+          //           ],
+          //         )
+          //       ],
+          //     ),
+          //     Spacer(),
+          //     Column(
+          //       children: [
+          //         InkWell(
+          //           onTap: () {},
+          //           child: Icon(
+          //             Icons.add_circle,
+          //             size: 50,
+          //             color: Color(0xff4B747B),
+          //           ),
+          //         ),
+          //         Text("4"),
+          //         Row(
+          //           children: [
+          //             Image(image: AssetImage("assets/image (28).png")),
+          //             SizedBox(
+          //               width: 3,
+          //             ),
+          //             Text("0"),
+          //           ],
+          //         )
+          //       ],
+          //     ),
+          //   ],
+          // ),
+          // SizedBox(
+          //   height: 5,
+          // ),
+          // Row(
+          //   children: [
+          //     Column(
+          //       children: [
+          //         InkWell(
+          //           onTap: () {},
+          //           child: Icon(
+          //             Icons.add_circle,
+          //             size: 50,
+          //             color: Color(0xff4B747B),
+          //           ),
+          //         ),
+          //         Text("5"),
+          //         Row(
+          //           children: [
+          //             Image(image: AssetImage("assets/image (28).png")),
+          //             SizedBox(
+          //               width: 3,
+          //             ),
+          //             Text("0"),
+          //           ],
+          //         )
+          //       ],
+          //     ),
+          //     Spacer(),
+          //     Column(
+          //       children: [
+          //         InkWell(
+          //           onTap: () {},
+          //           child: Icon(
+          //             Icons.add_circle,
+          //             size: 50,
+          //             color: Color(0xff4B747B),
+          //           ),
+          //         ),
+          //         Text("6"),
+          //         Row(
+          //           children: [
+          //             Image(image: AssetImage("assets/image (28).png")),
+          //             SizedBox(
+          //               width: 3,
+          //             ),
+          //             Text("0"),
+          //           ],
+          //         )
+          //       ],
+          //     ),
+          //     Spacer(),
+          //     Column(
+          //       children: [
+          //         InkWell(
+          //           onTap: () {},
+          //           child: Icon(
+          //             Icons.add_circle,
+          //             size: 50,
+          //             color: Color(0xff4B747B),
+          //           ),
+          //         ),
+          //         Text("7"),
+          //         Row(
+          //           children: [
+          //             Image(image: AssetImage("assets/image (28).png")),
+          //             SizedBox(
+          //               width: 3,
+          //             ),
+          //             Text("0"),
+          //           ],
+          //         )
+          //       ],
+          //     ),
+          //     Spacer(),
+          //     Column(
+          //       children: [
+          //         InkWell(
+          //           onTap: () {},
+          //           child: Icon(
+          //             Icons.add_circle,
+          //             size: 50,
+          //             color: Color(0xff4B747B),
+          //           ),
+          //         ),
+          //         Text("8"),
+          //         Row(
+          //           children: [
+          //             Image(image: AssetImage("assets/image (28).png")),
+          //             SizedBox(
+          //               width: 3,
+          //             ),
+          //             Text("0"),
+          //           ],
+          //         ),
+          //       ],
+          //     ),
+          //   ],
+          // ),
         ],
       ),
     );

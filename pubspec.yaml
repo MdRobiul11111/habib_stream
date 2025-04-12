@@ -34,6 +34,7 @@ dependencies:
   dio: ^5.8.0+1
   dio_smart_retry: ^7.0.1
   equatable: ^2.0.7
+  fast_immutable_collections: ^11.0.4
   flutter:
     sdk: flutter
   flutter_hooks: ^0.21.2
@@ -41,17 +42,18 @@ dependencies:
   hooks_riverpod: ^2.6.1
   jwt_decoder: ^2.0.1
   logger: ^2.5.0
+  permission_handler: ^12.0.0+1
   shared_preferences: ^2.5.3
   talker_dio_logger: ^4.7.1
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.14.3"
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: "^0.14.3"
 
 flutter_icons:
-  image_path: "assets/app.jpg" 
+  image_path: "assets/app.jpg"
 
   android: true
   ios: true

@@ -23,7 +23,9 @@ class _EmjiLovePageState extends State<EmjiLovePage> {
             children: [
               Column(
                 children: [
-                  Roomhomepage(),
+                  Roomhomepage(
+                    userCount: 0,
+                  ),
                 ],
               )
             ],

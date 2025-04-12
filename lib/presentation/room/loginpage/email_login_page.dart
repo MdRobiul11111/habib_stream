@@ -1,10 +1,10 @@
+import 'package:agora_rtc_engine/agora_rtc_engine.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:habib_stream/application/auth/auth_provider.dart';
 import 'package:habib_stream/application/core/token_provider.dart';
 import 'package:habib_stream/domain/auth/login_body.dart';
 import 'package:habib_stream/presentation/room/root/root_page.dart';
-import 'package:habib_stream/presentation/room/loginpage/forget_page.dart';
 import 'package:habib_stream/presentation/room/loginpage/social_login_page.dart';
 import 'package:habib_stream/repository/logger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -79,7 +79,6 @@ class EmailLogin extends HookConsumerWidget {
                     width: 390,
                     color: Color(0xff4E8A96),
                     child: TextFormField(
-                      obscureText: true,
                       controller: emailController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {

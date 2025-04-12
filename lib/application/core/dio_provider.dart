@@ -26,7 +26,7 @@ final dioProvider = AutoDisposeProvider<Dio>((ref) {
     InterceptorsWrapper(
       onRequest: (options, handler) async {
         try {
-          final token = await ref.watch(tokenProvider.future);
+          final token = await ref.read(tokenProvider.future);
           if (token != null) {
             options.headers['Authorization'] = 'Bearer $token';
           }

@@ -7,14 +7,16 @@ import 'package:habib_stream/repository/token_repo.dart';
 
 class AuthRepo {
   final Dio dio;
+  final Future<void> Function(String token) setToken;
   final TokenRepo tokenRepo;
-  AuthRepo({required this.dio, required this.tokenRepo});
+  AuthRepo(
+      {required this.dio, required this.setToken, required this.tokenRepo});
 
   Future<(UserProfile, String)> login(LoginBody body) async {
     try {
       final response = await dio.post('/api/signin', data: body.toMap());
       final tokenResponse = LoginResponse.fromMap(response.data);
-      await tokenRepo.setAccessToken(tokenResponse.token);
+      await setToken(tokenResponse.token);
       return (await getProfile(), tokenResponse.token);
     } on DioException catch (e) {
       logger.e(e);

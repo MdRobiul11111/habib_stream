@@ -23,7 +23,9 @@ class _EmogiMusicPageState extends State<EmogiMusicPage> {
             children: [
               Column(
                 children: [
-                  Roomhomepage(),
+                  Roomhomepage(
+                    userCount: 0,
+                  ),
                 ],
               )
             ],

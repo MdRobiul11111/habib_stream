@@ -10,9 +10,9 @@ final tokenRepoProvider = FutureProvider((ref) async {
 });
 
 final tokenProvider =
-    AutoDisposeAsyncNotifierProvider<TokenNotifier, String?>(TokenNotifier.new);
+    AsyncNotifierProvider<TokenNotifier, String?>(TokenNotifier.new);
 
-class TokenNotifier extends AutoDisposeAsyncNotifier<String?> {
+class TokenNotifier extends AsyncNotifier<String?> {
   @override
   FutureOr<String?> build() async {
     final stopwatch = Stopwatch()..start();
@@ -23,8 +23,11 @@ class TokenNotifier extends AutoDisposeAsyncNotifier<String?> {
     return token;
   }
 
-  void setToken(String token) {
+  Future<void> setToken(String token) async {
     logger.i('Setting token: $token');
+    await ref.read(tokenRepoProvider.future).then((tokenRepo) {
+      tokenRepo.setAccessToken(token);
+    });
     state = AsyncData(token);
   }
 }

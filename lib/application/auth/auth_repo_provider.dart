@@ -5,5 +5,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final authRepoProvider = AutoDisposeFutureProvider((ref) async {
   final tokenRepo = await ref.read(tokenRepoProvider.future);
-  return AuthRepo(tokenRepo: tokenRepo, dio: ref.read(dioProvider));
+  return AuthRepo(
+    tokenRepo: tokenRepo,
+    dio: ref.read(dioProvider),
+    setToken: ref.read(tokenProvider.notifier).setToken,
+  );
 });
