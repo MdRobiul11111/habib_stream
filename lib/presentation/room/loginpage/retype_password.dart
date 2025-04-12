@@ -106,7 +106,7 @@ class _RetypepasswordState extends State<Retypepassword> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => HomePage(),
+                                builder: (context) => RootPage(),
                               ));
                         },
                         child: Text(

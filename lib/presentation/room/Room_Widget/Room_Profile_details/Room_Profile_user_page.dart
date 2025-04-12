@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/Room/Room_Widget/RoomHomePage.dart';
-import 'package:habib_stream/Room/Room_Widget/Room_Profile_Gift_Page.dart';
-import 'package:habib_stream/Room/Room_Widget/Room_Profile_details/Room_profile_Report_Page.dart';
+import 'package:habib_stream/presentation/room/Room_Widget/RoomHomePage.dart';
+import 'package:habib_stream/presentation/room/Room_Widget/Room_Profile_Gift_Page.dart';
+import 'package:habib_stream/presentation/room/Room_Widget/Room_Profile_details/Room_profile_Report_Page.dart';
 
 class RoomProfileUserPage extends StatefulWidget {
   const RoomProfileUserPage({super.key});

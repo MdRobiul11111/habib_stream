@@ -24,7 +24,7 @@ class EmailLogin extends HookConsumerWidget {
         if (next.hasValue && next.value != null) {
           Navigator.of(context).pushAndRemoveUntil(
               MaterialPageRoute(
-                builder: (context) => const HomePage(),
+                builder: (context) => const RootPage(),
               ),
               (route) => false);
         }

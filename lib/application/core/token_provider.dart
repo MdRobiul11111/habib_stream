@@ -24,6 +24,7 @@ class TokenNotifier extends AutoDisposeAsyncNotifier<String?> {
   }
 
   void setToken(String token) {
+    logger.i('Setting token: $token');
     state = AsyncData(token);
   }
 }

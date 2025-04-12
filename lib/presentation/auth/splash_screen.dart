@@ -15,7 +15,7 @@ class SplashScreen extends HookConsumerWidget {
         if (next.hasValue && next.value != null) {
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
-              builder: (context) => const HomePage(),
+              builder: (context) => const RootPage(),
             ),
           );
         } else {
