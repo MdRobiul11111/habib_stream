@@ -1,19 +1,19 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/HomePage/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Daily_Page.dart';
-import 'package:habib_stream/presentation/room/HomePage/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Monthly_Page.dart';
-import 'package:habib_stream/presentation/room/HomePage/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Weekly_Page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Daily_Page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Monthly_Page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Weekly_Page.dart';
 
-class DefaulttabcontrollerGiftersBangladeshPage extends StatefulWidget {
-  const DefaulttabcontrollerGiftersBangladeshPage({super.key});
+class DefaulttabcontrollerBangladeshPage extends StatefulWidget {
+  const DefaulttabcontrollerBangladeshPage({super.key});
 
   @override
-  State<DefaulttabcontrollerGiftersBangladeshPage> createState() =>
-      _DefaulttabcontrollerGiftersBangladeshPageState();
+  State<DefaulttabcontrollerBangladeshPage> createState() =>
+      _DefaulttabcontrollerBangladeshPageState();
 }
 
-class _DefaulttabcontrollerGiftersBangladeshPageState
-    extends State<DefaulttabcontrollerGiftersBangladeshPage> {
+class _DefaulttabcontrollerBangladeshPageState
+    extends State<DefaulttabcontrollerBangladeshPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -42,12 +42,10 @@ class _DefaulttabcontrollerGiftersBangladeshPageState
                   ]),
               automaticallyImplyLeading: false,
             ),
-            body: Container(
-              child: TabBarView(children: [
-                TopPartyDailyPage(),
-                TopPartyWeeklyPage(),
-                TopPartyMonthlyPage(),
-              ]),
-            )));
+            body: TabBarView(children: [
+              TopPartyDailyPage(),
+              TopPartyWeeklyPage(),
+              TopPartyMonthlyPage(),
+            ])));
   }
 }

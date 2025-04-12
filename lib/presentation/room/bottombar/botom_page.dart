@@ -1,7 +1,7 @@
 // ignore: file_names
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/HomePage/home_page.dart';
+import 'package:habib_stream/presentation/room/home_page/home_page.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

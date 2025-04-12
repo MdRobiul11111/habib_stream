@@ -1,19 +1,18 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/HomePage/Couple_Widget/coupol_Bangladesh_widgets/coupol_global_widget/Blessings_bangladesh_widgets/cp_blessings_bangladesh.dart';
-import 'package:habib_stream/presentation/room/HomePage/Couple_Widget/coupol_Bangladesh_widgets/coupol_global_widget/CP_total_bangladesh_widgets/Cp_total_bangladesh_page.dart';
-import 'package:habib_stream/presentation/room/HomePage/Couple_Widget/coupol_Bangladesh_widgets/coupol_global_widget/Cp_Weekly_bangladesh_Widgets/CP_Weekly_bangladesh_page.dart';
+import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_global_widget/Blessings_widgets/cp_blessings.dart';
+import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_global_widget/CP_total_widgets/Cp_total_page.dart';
+import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_global_widget/Cp_Weekly_Widgets/CP_Weekly_page.dart';
 
-class DefoldercontrollerBangladeshPage extends StatefulWidget {
-  const DefoldercontrollerBangladeshPage({super.key});
+class DefoldercontrollerPageccc extends StatefulWidget {
+  const DefoldercontrollerPageccc({super.key});
 
   @override
-  State<DefoldercontrollerBangladeshPage> createState() =>
-      _DefoldercontrollerBangladeshPageState();
+  State<DefoldercontrollerPageccc> createState() =>
+      _DefoldercontrollerPagecccState();
 }
 
-class _DefoldercontrollerBangladeshPageState
-    extends State<DefoldercontrollerBangladeshPage> {
+class _DefoldercontrollerPagecccState extends State<DefoldercontrollerPageccc> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -44,9 +43,9 @@ class _DefoldercontrollerBangladeshPageState
             ),
             body: Container(
               child: TabBarView(children: [
-                CpWeeklyBangladeshPage(),
-                CpTotalBangladeshPage(),
-                CpBlessingsBangladesh(),
+                CpWeeklyPage(),
+                CpTotalPage(),
+                CpBlessings(),
               ]),
             )));
   }

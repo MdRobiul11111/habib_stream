@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/HomePage/Couple_Widget/coupol_global_widget/DefolderController_page.dart';
+import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_global_widget/DefolderController_page.dart';
 
 class CoupleBangladeshPage extends StatefulWidget {
   const CoupleBangladeshPage({super.key});

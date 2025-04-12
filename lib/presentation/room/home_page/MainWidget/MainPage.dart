@@ -1,8 +1,8 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/HomePage/MainWidget/FollowPage.dart';
-import 'package:habib_stream/presentation/room/HomePage/MainWidget/FriendsPage.dart';
-import 'package:habib_stream/presentation/room/HomePage/MainWidget/RecentlyPage.dart';
+import 'package:habib_stream/presentation/room/home_page/MainWidget/FollowPage.dart';
+import 'package:habib_stream/presentation/room/home_page/MainWidget/FriendsPage.dart';
+import 'package:habib_stream/presentation/room/home_page/MainWidget/RecentlyPage.dart';
 import 'package:habib_stream/presentation/room/searchPage/searchPage.dart';
 
 class Mainpage extends StatefulWidget {

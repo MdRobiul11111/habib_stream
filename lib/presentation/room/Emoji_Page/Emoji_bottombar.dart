@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/Emoji_Page/Emji_Love_page.dart';
-import 'package:habib_stream/presentation/room/Emoji_Page/Emogi_Fighting_page.dart';
-import 'package:habib_stream/presentation/room/Emoji_Page/Emogi_music_page.dart';
-import 'package:habib_stream/presentation/room/Emoji_Page/Emoji_cry_page.dart';
-import 'package:habib_stream/presentation/room/Emoji_Page/Emoji_smile_page.dart';
+import 'package:habib_stream/presentation/room/emoji_page/Emji_Love_page.dart';
+import 'package:habib_stream/presentation/room/emoji_page/Emogi_Fighting_page.dart';
+import 'package:habib_stream/presentation/room/emoji_page/Emogi_music_page.dart';
+import 'package:habib_stream/presentation/room/emoji_page/Emoji_cry_page.dart';
+import 'package:habib_stream/presentation/room/emoji_page/Emoji_smile_page.dart';
 
 class EmojiBottombar extends StatefulWidget {
   const EmojiBottombar({super.key});

@@ -1,19 +1,19 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/HomePage/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Daily_Page.dart';
-import 'package:habib_stream/presentation/room/HomePage/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Monthly_Page.dart';
-import 'package:habib_stream/presentation/room/HomePage/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Weekly_Page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Daily_Page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Monthly_Page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Party_widget/Top_Party_Weekly_Page.dart';
 
-class DefaulttabcontrollerBangladeshPage extends StatefulWidget {
-  const DefaulttabcontrollerBangladeshPage({super.key});
+class DefaulttabcontrollerGiftersPage extends StatefulWidget {
+  const DefaulttabcontrollerGiftersPage({super.key});
 
   @override
-  State<DefaulttabcontrollerBangladeshPage> createState() =>
-      _DefaulttabcontrollerBangladeshPageState();
+  State<DefaulttabcontrollerGiftersPage> createState() =>
+      _DefaulttabcontrollerGiftersPageState();
 }
 
-class _DefaulttabcontrollerBangladeshPageState
-    extends State<DefaulttabcontrollerBangladeshPage> {
+class _DefaulttabcontrollerGiftersPageState
+    extends State<DefaulttabcontrollerGiftersPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

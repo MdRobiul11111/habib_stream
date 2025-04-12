@@ -1,18 +1,19 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/HomePage/Couple_Widget/coupol_global_widget/Blessings_widgets/cp_blessings.dart';
-import 'package:habib_stream/presentation/room/HomePage/Couple_Widget/coupol_global_widget/CP_total_widgets/Cp_total_page.dart';
-import 'package:habib_stream/presentation/room/HomePage/Couple_Widget/coupol_global_widget/Cp_Weekly_Widgets/CP_Weekly_page.dart';
+import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_Bangladesh_widgets/coupol_global_widget/Blessings_bangladesh_widgets/cp_blessings_bangladesh.dart';
+import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_Bangladesh_widgets/coupol_global_widget/CP_total_bangladesh_widgets/Cp_total_bangladesh_page.dart';
+import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_Bangladesh_widgets/coupol_global_widget/Cp_Weekly_bangladesh_Widgets/CP_Weekly_bangladesh_page.dart';
 
-class DefoldercontrollerPageccc extends StatefulWidget {
-  const DefoldercontrollerPageccc({super.key});
+class DefoldercontrollerBangladeshPage extends StatefulWidget {
+  const DefoldercontrollerBangladeshPage({super.key});
 
   @override
-  State<DefoldercontrollerPageccc> createState() =>
-      _DefoldercontrollerPagecccState();
+  State<DefoldercontrollerBangladeshPage> createState() =>
+      _DefoldercontrollerBangladeshPageState();
 }
 
-class _DefoldercontrollerPagecccState extends State<DefoldercontrollerPageccc> {
+class _DefoldercontrollerBangladeshPageState
+    extends State<DefoldercontrollerBangladeshPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -43,9 +44,9 @@ class _DefoldercontrollerPagecccState extends State<DefoldercontrollerPageccc> {
             ),
             body: Container(
               child: TabBarView(children: [
-                CpWeeklyPage(),
-                CpTotalPage(),
-                CpBlessings(),
+                CpWeeklyBangladeshPage(),
+                CpTotalBangladeshPage(),
+                CpBlessingsBangladesh(),
               ]),
             )));
   }
