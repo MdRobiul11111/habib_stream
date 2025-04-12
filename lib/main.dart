@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           body: Loginpage1(),
-          //  body: LivehomePage(),
         ));
   }
 }
