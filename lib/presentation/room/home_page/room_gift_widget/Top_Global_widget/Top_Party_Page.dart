@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Bangladesh_widget/Top_Party_Bangladesh_Page.dart';
 import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Game_Page.dart';
-import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Gifters_Widgets/Defaulttabcontroller_Gifters_Page.dart';
 import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Party_widget/DefaultTabController_Page.dart';
 import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Star_Widgets/DefaultTabController_Star_Page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/top_bangladesh_widget/top_party_bangladesh_page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/top_global_widget/top_gifters_widgets/default_tabcontroller_gifters_page.dart';
 
 class TopPartyPage extends StatefulWidget {
   const TopPartyPage({super.key});
@@ -19,7 +19,7 @@ class _TopPartyPageState extends State<TopPartyPage> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xff5FA3B0),
+          backgroundColor: Color(0xff78CADD),
           bottom: TabBar(
               labelColor: Colors.white,
               unselectedLabelColor: Colors.white,

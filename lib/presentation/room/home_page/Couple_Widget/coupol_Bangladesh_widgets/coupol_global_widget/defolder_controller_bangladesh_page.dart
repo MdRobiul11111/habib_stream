@@ -1,8 +1,8 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_Bangladesh_widgets/coupol_global_widget/Blessings_bangladesh_widgets/cp_blessings_bangladesh.dart';
-import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_Bangladesh_widgets/coupol_global_widget/CP_total_bangladesh_widgets/Cp_total_bangladesh_page.dart';
-import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_Bangladesh_widgets/coupol_global_widget/Cp_Weekly_bangladesh_Widgets/CP_Weekly_bangladesh_page.dart';
+import 'package:habib_stream/presentation/room/home_page/couple_widget/coupol_bangladesh_widgets/coupol_global_widget/blessings_bangladesh_widgets/cp_blessings_bangladesh.dart';
+import 'package:habib_stream/presentation/room/home_page/couple_widget/coupol_bangladesh_widgets/coupol_global_widget/cp_total_bangladesh_widgets/cp_total_bangladesh_page.dart';
+import 'package:habib_stream/presentation/room/home_page/couple_widget/coupol_bangladesh_widgets/coupol_global_widget/cp_weekly_bangladesh_Widgets/CP_Weekly_bangladesh_page.dart';
 
 class DefoldercontrollerBangladeshPage extends StatefulWidget {
   const DefoldercontrollerBangladeshPage({super.key});
@@ -42,12 +42,10 @@ class _DefoldercontrollerBangladeshPageState
                   ]),
               automaticallyImplyLeading: false,
             ),
-            body: Container(
-              child: TabBarView(children: [
-                CpWeeklyBangladeshPage(),
-                CpTotalBangladeshPage(),
-                CpBlessingsBangladesh(),
-              ]),
-            )));
+            body: TabBarView(children: [
+              CpWeeklyBangladeshPage(),
+              CpTotalBangladeshPage(),
+              CpBlessingsBangladesh(),
+            ])));
   }
 }

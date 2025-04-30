@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/application/room/rooms_provider.dart';
 import 'package:habib_stream/presentation/room/all_country_page/all_country_page.dart';
-import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_global_widget/Couple_global_page.dart';
-import 'package:habib_stream/presentation/room/home_page/main_widget/MainPage.dart';
+import 'package:habib_stream/presentation/room/home_page/couple_widget/coupol_global_widget/couple_global_page.dart';
+import 'package:habib_stream/presentation/room/home_page/gifts_sent/global/top_party_page.dart';
+import 'package:habib_stream/presentation/room/home_page/main_widget/mainpage.dart';
 import 'package:habib_stream/presentation/room/home_page/main_widget/room_widget.dart';
 import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Global_widget/Top_Party_Page.dart';
-import 'package:habib_stream/presentation/room/My_Room_Create_page.dart/Create_Chatroom.dart';
-import 'package:habib_stream/presentation/room/searchPage/searchPage.dart';
+import 'package:habib_stream/presentation/room/my_room_create_page.dart/create_chatroom.dart';
+import 'package:habib_stream/presentation/room/searchPage/searchpage.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HomePage extends HookConsumerWidget {
@@ -121,11 +122,20 @@ class HomePage extends HookConsumerWidget {
                       ),
                     ),
                     Spacer(),
-                    SizedBox(
-                      width: 124,
-                      child: Image(
-                        image: AssetImage("assets/Group 1361.png"),
-                        fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Gifts_sent_TopPartyPage(),
+                            ));
+                      },
+                      child: SizedBox(
+                        width: 124,
+                        child: Image(
+                          image: AssetImage("assets/Group 1361.png"),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     Spacer(),
