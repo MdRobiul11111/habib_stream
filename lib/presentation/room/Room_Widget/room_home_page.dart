@@ -4,6 +4,7 @@ import 'package:habib_stream/presentation/room/Room_Widget/Logout_Page.dart';
 import 'package:habib_stream/presentation/room/Room_Widget/Room_Profile_details/Room_detail_page.dart';
 import 'package:habib_stream/presentation/room/Room_Widget/Room_pk_page.dart';
 import 'package:habib_stream/presentation/room/my_room_create_page.dart/on_mic_page.dart';
+import 'package:habib_stream/presentation/room/room_widget/pk_result_page/room_add_application_page.dart';
 
 class Roomhomepage extends StatefulWidget {
   final int userCount;
@@ -57,11 +58,13 @@ class _RoomhomepageState extends State<Roomhomepage> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => RoomDetails(),
-                                      ));
+                                  showModalBottomSheet(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return Container(
+                                          child: RoomDetails(),
+                                        );
+                                      });
                                 },
                                 child: Text(
                                   "Habib Khan",
@@ -142,11 +145,18 @@ class _RoomhomepageState extends State<Roomhomepage> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ContributionDailyList(),
-                          ));
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Container(
+                              height: 800,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(20),
+                                      topRight: Radius.circular(20))),
+                              child: ContributionDailyList(),
+                            );
+                          });
                     },
                     child: Container(
                       height: 29,
@@ -219,11 +229,14 @@ class _RoomhomepageState extends State<Roomhomepage> {
               Spacer(),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => OnMicPage(),
-                      ));
+                  showModalBottomSheet(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return Container(
+                          height: 300,
+                          child: OnMicPage(),
+                        );
+                      });
                 },
                 child: Column(
                   children: [
@@ -288,7 +301,13 @@ class _RoomhomepageState extends State<Roomhomepage> {
             itemBuilder: (context, index) => Column(
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    showModalBottomSheet(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return RoomAddApplicationPage();
+                        });
+                  },
                   child: Icon(
                     index + 1 <= widget.userCount
                         ? Icons.person

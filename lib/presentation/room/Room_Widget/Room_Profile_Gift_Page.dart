@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/RoomHomePage.dart';
 
 class RoomProfileGiftPage extends StatefulWidget {
   const RoomProfileGiftPage({super.key});
@@ -12,24 +11,11 @@ class _RoomProfileGiftPageState extends State<RoomProfileGiftPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff5E95A0),
+      backgroundColor: Color(0xff422727),
       body: Stack(
         children: [
-          Container(
-            margin: EdgeInsets.only(top: 25),
-            color: Color(0xff5E95A0),
-            child: Roomhomepage(),
-          ),
-          SizedBox(
-              height: 700,
-              width: 600,
-              child: Image(
-                image: AssetImage("assets/Rectangle 320.png"),
-                fit: BoxFit.cover,
-              )),
           Column(
             children: [
-              Spacer(),
               Container(
                 height: 425,
                 width: 430,

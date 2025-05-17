@@ -21,21 +21,26 @@ class _RoomBottomState extends State<RoomBottom> {
         children: [
           InkWell(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Inboxpage(),
-                    ));
+                showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 50,
+                        child: Inboxpage(),
+                      );
+                    });
               },
               child: Image(image: AssetImage("assets/Group 2316.png"))),
           Spacer(),
           InkWell(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => RaiseYourHand(),
-                    ));
+                showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        child: RaiseYourHand(),
+                      );
+                    });
               },
               child: Image(image: AssetImage("assets/Group 2317.png"))),
           Spacer(),
@@ -55,21 +60,25 @@ class _RoomBottomState extends State<RoomBottom> {
           Spacer(),
           InkWell(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => PartyPage(),
-                    ));
+                showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        child: PartyPage(),
+                      );
+                    });
               },
               child: Image(image: AssetImage("assets/Group 2320.png"))),
           Spacer(),
           InkWell(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => RoomProfileGiftPage(),
-                    ));
+                showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        child: RoomProfileGiftPage(),
+                      );
+                    });
               },
               child: Image(image: AssetImage("assets/image 603.png"))),
         ],
@@ -77,81 +86,3 @@ class _RoomBottomState extends State<RoomBottom> {
     );
   }
 }
-
-// import 'package:flutter/material.dart';
-// import 'package:habib_stream/widget/Room_Widget/RoomPage.dart';
-// import 'package:habib_stream/widget/Room_Widget/inboxpage.dart';
-
-// class BottomNav extends StatefulWidget {
-//   BottomNav({Key? key}) : super(key: key);
-
-//   @override
-//   _BottomNavState createState() => _BottomNavState();
-// }
-
-// class _BottomNavState extends State<BottomNav> with TickerProviderStateMixin {
-//   late TabController tabController;
-//   int selectedIndex = 0;
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     tabController = TabController(length: 6, vsync: this);
-//   }
-
-//   List<Widget> myChilders = const [
-//     Roompage(),
-//     Inboxpage(),
-//     Roompage(),
-//     Roompage(),
-//     Roompage(),
-//     Roompage(),
-//   ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         body: TabBarView(
-//             physics: const NeverScrollableScrollPhysics(),
-//             controller: tabController,
-//             children: myChilders),
-//         bottomNavigationBar: SizedBox(
-//           child: BottomAppBar(
-//             color: Color(0xff7CCEDC),
-//             child: TabBar(
-//                 onTap: (index) {
-//                   setState(() {
-//                     selectedIndex = index;
-//                   });
-//                 },
-//                 controller: tabController,
-//                 tabs: [
-//                   Tab(
-//                     iconMargin: EdgeInsets.only(bottom: 4),
-//                     icon: Image(image: AssetImage("assets/Group 2316.png")),
-//                   ),
-//                   Tab(
-//                     iconMargin: EdgeInsets.only(bottom: 4),
-//                     icon: Image(image: AssetImage("assets/Group 2317.png")),
-//                   ),
-//                   Tab(
-//                     iconMargin: EdgeInsets.only(bottom: 4),
-//                     icon: Image(image: AssetImage("assets/Group 2318.png")),
-//                   ),
-//                   Tab(
-//                     iconMargin: EdgeInsets.only(bottom: 4),
-//                     icon: Image(image: AssetImage("assets/Group 2319.png")),
-//                   ),
-//                   const Tab(
-//                     iconMargin: EdgeInsets.only(bottom: 4),
-//                     icon: Image(image: AssetImage("assets/Group 2320.png")),
-//                   ),
-//                   const Tab(
-//                     iconMargin: EdgeInsets.only(bottom: 9),
-//                     icon: Image(image: AssetImage("assets/image 603.png")),
-//                   )
-//                 ]),
-//           ),
-//         ));
-//   }
-// }

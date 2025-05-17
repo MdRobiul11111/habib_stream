@@ -96,7 +96,6 @@ class _CreateChatroomState extends State<CreateChatroom> {
                       height: 50,
                       width: 390,
                       child: TextFormField(
-                        obscureText: true,
                         decoration: InputDecoration(
                             hoverColor: Colors.amber,
                             border: OutlineInputBorder(),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/RoomHomePage.dart';
 import 'package:habib_stream/presentation/room/Room_Widget/Room_Profile_details/Room_Profile_user_page.dart';
+import 'package:habib_stream/presentation/room/room_widget/room_profile_details/room_profile_report_page.dart';
 
 class RoomDetails extends StatefulWidget {
   const RoomDetails({super.key});
@@ -14,18 +14,12 @@ class _RoomDetailsState extends State<RoomDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Color(0xff5E95A0),
-        // decoration: BoxDecoration(
-        //   image: DecorationImage(
-        //       image: AssetImage("assets/image 1.png"), fit: BoxFit.cover),
-        // ),
+        color: Color(0xff355A63),
         child: ListView(
           children: [
             Stack(
               children: [
-                Container(color: Color(0xff5E95A0), child: Roomhomepage()),
                 Container(
-                  margin: EdgeInsets.only(top: 160),
                   height: 720,
                   width: 450,
                   decoration: BoxDecoration(
@@ -51,9 +45,22 @@ class _RoomDetailsState extends State<RoomDetails> {
                                   color: Colors.black),
                             ),
                             Spacer(),
-                            Icon(
-                              Icons.report_problem,
-                              color: Color(0xff78CBDD),
+                            InkWell(
+                              onTap: () {
+                                showModalBottomSheet(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return Container(
+                                        height: 220,
+                                        width: 600,
+                                        child: RoomProfileReportPage(),
+                                      );
+                                    });
+                              },
+                              child: Icon(
+                                Icons.report_problem,
+                                color: Color(0xff78CBDD),
+                              ),
                             )
                           ],
                         ),
@@ -249,7 +256,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("Habib Khan"),
+                                  InkWell(
+                                      onTap: () {
+                                        showModalBottomSheet(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return Container(
+                                                child: RoomProfileUserPage(),
+                                              );
+                                            });
+                                      },
+                                      child: Text("Habib Khan")),
                                   Row(
                                     children: [
                                       Image(
@@ -270,12 +287,15 @@ class _RoomDetailsState extends State<RoomDetails> {
                               Spacer(),
                               IconButton(
                                   onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              RoomProfileUserPage(),
-                                        ));
+                                    showModalBottomSheet(
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                          return Container(
+                                            height: 220,
+                                            width: 600,
+                                            child: RoomProfileReportPage(),
+                                          );
+                                        });
                                   },
                                   icon: Icon(
                                     Icons.report_problem,
@@ -301,7 +321,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Habib Khan"),
+                                InkWell(
+                                    onTap: () {
+                                      showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return Container(
+                                              child: RoomProfileUserPage(),
+                                            );
+                                          });
+                                    },
+                                    child: Text("Habib Khan")),
                                 Row(
                                   children: [
                                     Image(
@@ -321,7 +351,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                             ),
                             Spacer(),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  showModalBottomSheet(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return Container(
+                                          height: 220,
+                                          width: 600,
+                                          child: RoomProfileReportPage(),
+                                        );
+                                      });
+                                },
                                 icon: Icon(
                                   Icons.report_problem,
                                   color: Color(0xff78CBDD),
@@ -345,7 +385,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Habib Khan"),
+                                InkWell(
+                                    onTap: () {
+                                      showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return Container(
+                                              child: RoomProfileUserPage(),
+                                            );
+                                          });
+                                    },
+                                    child: Text("Habib Khan")),
                                 Row(
                                   children: [
                                     Image(
@@ -365,7 +415,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                             ),
                             Spacer(),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  showModalBottomSheet(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return Container(
+                                          height: 220,
+                                          width: 600,
+                                          child: RoomProfileReportPage(),
+                                        );
+                                      });
+                                },
                                 icon: Icon(
                                   Icons.report_problem,
                                   color: Color(0xff78CBDD),
@@ -389,7 +449,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Habib Khan"),
+                                InkWell(
+                                    onTap: () {
+                                      showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return Container(
+                                              child: RoomProfileUserPage(),
+                                            );
+                                          });
+                                    },
+                                    child: Text("Habib Khan")),
                                 Row(
                                   children: [
                                     Image(
@@ -409,7 +479,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                             ),
                             Spacer(),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  showModalBottomSheet(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return Container(
+                                          height: 220,
+                                          width: 600,
+                                          child: RoomProfileReportPage(),
+                                        );
+                                      });
+                                },
                                 icon: Icon(
                                   Icons.report_problem,
                                   color: Color(0xff78CBDD),
@@ -433,7 +513,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Habib Khan"),
+                                InkWell(
+                                    onTap: () {
+                                      showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return Container(
+                                              child: RoomProfileUserPage(),
+                                            );
+                                          });
+                                    },
+                                    child: Text("Habib Khan")),
                                 Row(
                                   children: [
                                     Image(
@@ -453,7 +543,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                             ),
                             Spacer(),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  showModalBottomSheet(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return Container(
+                                          height: 220,
+                                          width: 600,
+                                          child: RoomProfileReportPage(),
+                                        );
+                                      });
+                                },
                                 icon: Icon(
                                   Icons.report_problem,
                                   color: Color(0xff78CBDD),
@@ -477,7 +577,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Habib Khan"),
+                                InkWell(
+                                    onTap: () {
+                                      showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return Container(
+                                              child: RoomProfileUserPage(),
+                                            );
+                                          });
+                                    },
+                                    child: Text("Habib Khan")),
                                 Row(
                                   children: [
                                     Image(
@@ -497,7 +607,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                             ),
                             Spacer(),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  showModalBottomSheet(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return Container(
+                                          height: 220,
+                                          width: 600,
+                                          child: RoomProfileReportPage(),
+                                        );
+                                      });
+                                },
                                 icon: Icon(
                                   Icons.report_problem,
                                   color: Color(0xff78CBDD),
@@ -521,7 +641,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Habib Khan"),
+                                InkWell(
+                                    onTap: () {
+                                      showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return Container(
+                                              child: RoomProfileUserPage(),
+                                            );
+                                          });
+                                    },
+                                    child: Text("Habib Khan")),
                                 Row(
                                   children: [
                                     Image(
@@ -541,7 +671,17 @@ class _RoomDetailsState extends State<RoomDetails> {
                             ),
                             Spacer(),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  showModalBottomSheet(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return Container(
+                                          height: 220,
+                                          width: 600,
+                                          child: RoomProfileReportPage(),
+                                        );
+                                      });
+                                },
                                 icon: Icon(
                                   Icons.report_problem,
                                   color: Color(0xff78CBDD),

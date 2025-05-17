@@ -47,6 +47,7 @@ dependencies:
   talker_dio_logger: ^4.7.1
   flutter_screenutil: ^5.9.3
   gal: ^2.3.0
+  emoji_picker_flutter: ^4.3.0
   get: ^4.6.6
 
 dev_dependencies:

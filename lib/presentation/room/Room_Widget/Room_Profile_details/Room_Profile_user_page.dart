@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/RoomHomePage.dart';
 import 'package:habib_stream/presentation/room/Room_Widget/Room_Profile_Gift_Page.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/Room_Profile_details/Room_profile_Report_Page.dart';
+import 'package:habib_stream/presentation/room/Room_Widget/room_home_page.dart';
+import 'package:habib_stream/presentation/room/room_widget/room_profile_details/room_profile_report_page.dart';
 
 class RoomProfileUserPage extends StatefulWidget {
   const RoomProfileUserPage({super.key});
@@ -57,12 +57,15 @@ class _RoomProfileUserPageState extends State<RoomProfileUserPage> {
                               Spacer(),
                               IconButton(
                                   onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              RoomProfileReportPage(),
-                                        ));
+                                    showModalBottomSheet(
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                          return Container(
+                                            height: 220,
+                                            width: 600,
+                                            child: RoomProfileReportPage(),
+                                          );
+                                        });
                                   },
                                   icon: Icon(
                                     Icons.report_problem,
@@ -316,12 +319,15 @@ class _RoomProfileUserPageState extends State<RoomProfileUserPage> {
                               Spacer(),
                               InkWell(
                                 onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            RoomProfileGiftPage(),
-                                      ));
+                                  showModalBottomSheet(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return Container(
+                                          height: 425,
+                                          width: 430,
+                                          child: RoomProfileGiftPage(),
+                                        );
+                                      });
                                 },
                                 child: SizedBox(
                                   height: 30,
@@ -340,7 +346,7 @@ class _RoomProfileUserPageState extends State<RoomProfileUserPage> {
                 ],
               ),
               Container(
-                margin: EdgeInsets.only(top: 30),
+                margin: EdgeInsets.only(bottom: 310),
                 child: Center(
                     child: SizedBox(
                         height: 70,
