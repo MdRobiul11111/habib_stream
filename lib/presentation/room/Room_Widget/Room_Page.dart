@@ -6,8 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:habib_stream/application/room/agora_token_provider.dart';
 import 'package:habib_stream/domain/rooms/rooms.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/RoomHomePage.dart';
 import 'package:habib_stream/presentation/room/Room_Widget/room_bottombar.dart';
+import 'package:habib_stream/presentation/room/Room_Widget/room_home_page.dart';
+import 'package:habib_stream/presentation/room/room_widget/commentpage.dart';
 import 'package:habib_stream/repository/logger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -99,7 +100,7 @@ class Roompage extends HookConsumerWidget {
                       ),
                       Spacer(),
 
-                      // Commentpage(),
+                      Commentpage(),
                       SizedBox(
                         height: 25,
                       ),

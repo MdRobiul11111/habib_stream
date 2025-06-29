@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_Bangladesh_widgets/coupol_global_widget/Couple_bangladesh_page.dart';
-import 'package:habib_stream/presentation/room/home_page/Couple_Widget/coupol_global_widget/DefolderController_page.dart';
+import 'package:habib_stream/presentation/room/home_page/couple_widget/coupol_bangladesh_widgets/coupol_global_widget/couple_bangladesh_page.dart';
+import 'package:habib_stream/presentation/room/home_page/couple_widget/coupol_global_widget/defolder_controller_page.dart';
 
 class CoupleGlobalPage extends StatefulWidget {
   const CoupleGlobalPage({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/My_Room_Create_page.dart/My_room_details/Room_setting_page.dart';
-import 'package:habib_stream/presentation/room/My_Room_Create_page.dart/on_mic_page.dart';
 import 'package:habib_stream/presentation/room/Room_Widget/Contribution_Daily_List.dart';
 import 'package:habib_stream/presentation/room/Room_Widget/Logout_Page.dart';
 import 'package:habib_stream/presentation/room/Room_Widget/Room_pk_page.dart';
+import 'package:habib_stream/presentation/room/my_room_create_page.dart/my_room_details/room_setting_page.dart';
+import 'package:habib_stream/presentation/room/my_room_create_page.dart/on_mic_page.dart';
 
 class MyRoomhomepage extends StatefulWidget {
   const MyRoomhomepage({super.key});
@@ -150,11 +150,13 @@ class _MyRoomhomepageState extends State<MyRoomhomepage> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ContributionDailyList(),
-                          ));
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Container(
+                              child: ContributionDailyList(),
+                            );
+                          });
                     },
                     child: Container(
                       height: 29,
@@ -227,11 +229,14 @@ class _MyRoomhomepageState extends State<MyRoomhomepage> {
               Spacer(),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => OnMicPage(),
-                      ));
+                  showModalBottomSheet(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return Container(
+                          height: 346,
+                          child: OnMicPage(),
+                        );
+                      });
                 },
                 child: Column(
                   children: [
@@ -291,13 +296,7 @@ class _MyRoomhomepageState extends State<MyRoomhomepage> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OnMicPage(),
-                          ));
-                    },
+                    onTap: () {},
                     child: Icon(
                       Icons.add_circle,
                       size: 50,
@@ -320,13 +319,7 @@ class _MyRoomhomepageState extends State<MyRoomhomepage> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OnMicPage(),
-                          ));
-                    },
+                    onTap: () {},
                     child: Icon(
                       Icons.add_circle,
                       size: 50,
@@ -349,13 +342,7 @@ class _MyRoomhomepageState extends State<MyRoomhomepage> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OnMicPage(),
-                          ));
-                    },
+                    onTap: () {},
                     child: Icon(
                       Icons.add_circle,
                       size: 50,
@@ -378,13 +365,7 @@ class _MyRoomhomepageState extends State<MyRoomhomepage> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OnMicPage(),
-                          ));
-                    },
+                    onTap: () {},
                     child: Icon(
                       Icons.add_circle,
                       size: 50,
@@ -413,13 +394,7 @@ class _MyRoomhomepageState extends State<MyRoomhomepage> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OnMicPage(),
-                          ));
-                    },
+                    onTap: () {},
                     child: Icon(
                       Icons.add_circle,
                       size: 50,
@@ -442,13 +417,7 @@ class _MyRoomhomepageState extends State<MyRoomhomepage> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OnMicPage(),
-                          ));
-                    },
+                    onTap: () {},
                     child: Icon(
                       Icons.add_circle,
                       size: 50,
@@ -471,13 +440,7 @@ class _MyRoomhomepageState extends State<MyRoomhomepage> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OnMicPage(),
-                          ));
-                    },
+                    onTap: () {},
                     child: Icon(
                       Icons.add_circle,
                       size: 50,
@@ -500,13 +463,7 @@ class _MyRoomhomepageState extends State<MyRoomhomepage> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OnMicPage(),
-                          ));
-                    },
+                    onTap: () {},
                     child: Icon(
                       Icons.add_circle,
                       size: 50,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/presentation/room/home_page/home_page.dart';
+import 'package:habib_stream/presentation/room/profile/profile_page.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});
@@ -24,7 +25,7 @@ class _RootPageState extends State<RootPage> with TickerProviderStateMixin {
     Icon(Icons.abc_outlined),
     HomePage(),
     Icon(Icons.abc_outlined),
-    Icon(Icons.abc_outlined),
+    ProfilePage(),
   ];
 
   @override
@@ -70,3 +71,59 @@ class _RootPageState extends State<RootPage> with TickerProviderStateMixin {
         ));
   }
 }
+
+
+
+// import 'package:flutter/cupertino.dart';
+// import 'package:flutter/material.dart';
+
+// class MainScreen extends StatefulWidget {
+//   const MainScreen({super.key});
+
+//   @override
+//   State<MainScreen> createState() => _MainScreenState();
+// }
+
+// class _MainScreenState extends State<MainScreen> {
+//   int _pageIndex = 0;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       bottomNavigationBar: BottomNavigationBar(
+//         type: BottomNavigationBarType.fixed,
+//         currentIndex: _pageIndex,
+//         onTap: (value) {
+//           setState(() {
+//             _pageIndex = value;
+//           });
+//         },
+//         unselectedItemColor: Colors.black,
+//         selectedItemColor: Colors.yellow,
+//         items: [
+//           BottomNavigationBarItem(
+//             icon: Icon(CupertinoIcons.home),
+//             label: 'Home',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: Icon(CupertinoIcons.conversation_bubble),
+//             label: 'CATEGORIES',
+//           ),
+//           BottomNavigationBarItem(icon: Icon(Icons.storefront), label: 'STORE'),
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.local_grocery_store),
+//             label: 'CART',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: Icon(CupertinoIcons.search),
+//             label: 'SEARCE',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.account_box),
+//             label: 'ACCOUNT',
+//           ),
+//         ],
+//       ),
+      
+//     );
+//   }
+// }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/RoomHomePage.dart';
 
 class OnMicPage extends StatefulWidget {
   const OnMicPage({super.key});
@@ -12,14 +11,12 @@ class _OnMicPageState extends State<OnMicPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff71C7D8),
+      backgroundColor: Color(0xff355A63),
       body: SafeArea(
           child: Column(
         children: [
-          Roomhomepage(),
-          Spacer(),
           Container(
-            height: 346,
+            height: 300,
             width: 500,
             decoration: BoxDecoration(
                 color: Colors.white,

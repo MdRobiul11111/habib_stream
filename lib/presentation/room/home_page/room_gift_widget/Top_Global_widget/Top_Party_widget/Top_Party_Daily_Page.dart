@@ -11,7 +11,7 @@ class _TopPartyDailyPageState extends State<TopPartyDailyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff5FA3B0),
+        backgroundColor: Color(0xff78CADD),
         body: ListView(
           children: [
             Column(

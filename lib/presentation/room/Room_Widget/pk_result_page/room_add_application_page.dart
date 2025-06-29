@@ -1,31 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/RoomHomePage.dart';
 
-class RoomwriteMsg extends StatefulWidget {
-  const RoomwriteMsg({super.key});
+class RoomAddApplicationPage extends StatefulWidget {
+  const RoomAddApplicationPage({super.key});
 
   @override
-  State<RoomwriteMsg> createState() => _RoomwriteMsgState();
+  State<RoomAddApplicationPage> createState() => _RoomAddApplicationPageState();
 }
 
-class _RoomwriteMsgState extends State<RoomwriteMsg> {
+class _RoomAddApplicationPageState extends State<RoomAddApplicationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff73C9DA),
+      backgroundColor: Color(0xff355A63),
       body: Stack(
         children: [
-          ListView(
-            children: [
-              Column(
-                children: [
-                  Roomhomepage(),
-                ],
-              ),
-            ],
-          ),
           Container(
-            margin: EdgeInsets.only(top: 190),
             width: 450,
             decoration: BoxDecoration(
                 color: Colors.white,
@@ -36,6 +25,9 @@ class _RoomwriteMsgState extends State<RoomwriteMsg> {
               children: [
                 Column(
                   children: [
+                    SizedBox(
+                      height: 20,
+                    ),
                     Text(
                       "You are currently rankd 1",
                       style:
@@ -55,7 +47,8 @@ class _RoomwriteMsgState extends State<RoomwriteMsg> {
                         children: [
                           Text(
                             "1",
-                            style: TextStyle(color: Color(0xff73C9DA)),
+                            style: TextStyle(
+                                fontSize: 30, color: Color(0xff73C9DA)),
                           ),
                           SizedBox(
                             width: 10,

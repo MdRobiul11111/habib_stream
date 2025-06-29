@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:habib_stream/presentation/room/Room_Widget/Contribution_Weekly_List.dart';
-import 'package:habib_stream/presentation/room/Room_Widget/RoomHomePage.dart';
 
 class ContributionDailyList extends StatefulWidget {
   const ContributionDailyList({super.key});
@@ -13,16 +12,17 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff6FC6D9),
+      backgroundColor: Color(0xff355A63),
       body: ListView(
         children: [
           Column(
             children: [
               Stack(
                 children: [
-                  Roomhomepage(),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Container(
-                      margin: EdgeInsets.only(top: 100),
                       height: 345,
                       width: 430,
                       decoration: BoxDecoration(
@@ -333,7 +333,7 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                         ],
                       )),
                   Container(
-                    margin: EdgeInsets.only(top: 442),
+                    margin: EdgeInsets.only(top: 342),
                     width: 500,
                     color: Color(0xff233D42),
                     child: Padding(
@@ -1355,7 +1355,7 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 165, left: 12),
+                    margin: EdgeInsets.only(top: 100, left: 12),
                     height: 37,
                     width: 178,
                     decoration: BoxDecoration(
@@ -1385,12 +1385,13 @@ class _ContributionDailyListState extends State<ContributionDailyList> {
                           width: 85,
                           child: InkWell(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        ContributionWeeklyList(),
-                                  ));
+                              showModalBottomSheet(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return Container(
+                                      child: ContributionWeeklyList(),
+                                    );
+                                  });
                             },
                             child: Center(
                               child: Text(

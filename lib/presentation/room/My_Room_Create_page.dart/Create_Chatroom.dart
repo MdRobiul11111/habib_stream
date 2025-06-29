@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/My_Room_Create_page.dart/My_Create_Room.dart';
+import 'package:habib_stream/presentation/room/my_room_create_page.dart/my_create_room.dart';
 
 class CreateChatroom extends StatefulWidget {
   const CreateChatroom({super.key});
@@ -96,7 +96,6 @@ class _CreateChatroomState extends State<CreateChatroom> {
                       height: 50,
                       width: 390,
                       child: TextFormField(
-                        obscureText: true,
                         decoration: InputDecoration(
                             hoverColor: Colors.amber,
                             border: OutlineInputBorder(),

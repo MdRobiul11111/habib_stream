@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:habib_stream/presentation/room/home_page/room_gift_widget/Top_Bangladesh_widget/Game_Bangladesh_Page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/top_bangladesh_widget/game_bangladesh_page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/top_bangladesh_widget/top_party_bangladesh_widget/default_tabcontroller_bangladesh_page.dart';
+import 'package:habib_stream/presentation/room/home_page/room_gift_widget/top_bangladesh_widget/top_star_bangladesh_widgets/default_tabcontroller_star_bangladesh_page.dart';
 
-import 'Top_Gifters_Bangladesh_Widgets/Defaulttabcontroller_Gifters_Bangladesh_Page.dart';
-import 'Top_Party_Bangladesh_widget/DefaultTabController_Bangladesh_Page.dart';
-import 'Top_Star_Bangladesh_Widgets/DefaultTabController_Star_Bangladesh_Page.dart';
+import '../../room_gift_widget/top_bangladesh_widget/top_gifters_bangladesh_widgets/Defaulttabcontroller_Gifters_Bangladesh_Page.dart';
 
 class TopPartyBangladeshPage extends StatefulWidget {
   const TopPartyBangladeshPage({super.key});
@@ -19,7 +19,7 @@ class _TopPartyBangladeshPageState extends State<TopPartyBangladeshPage> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xff5FA3B0),
+          backgroundColor: Color(0xff78CADD),
           bottom: TabBar(
               labelColor: Colors.white,
               unselectedLabelColor: Colors.white,
